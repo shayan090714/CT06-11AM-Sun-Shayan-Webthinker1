@@ -8,7 +8,7 @@ function draw(){
     noStroke(); //no outline
     ellipse(300,400,50,50);
     fill('yellow');
-    ellipse(300,200,50,50);
+    ellipse(300,100,50,50);
     fill(255, 0, 0); //255,0,0
     ellipse(300,200,50,50);
     
