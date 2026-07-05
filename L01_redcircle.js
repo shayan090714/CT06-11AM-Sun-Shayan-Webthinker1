@@ -6,7 +6,7 @@ function setup(){
 function draw(){
     fill(255, 0, 0); //255,0,0
     noStroke(); //no outline
-    ellipse(300,200,200,200);
+    ellipse(300,400,50,50);
     
     // Todo: Challenge 3 Traffic Light
 }
