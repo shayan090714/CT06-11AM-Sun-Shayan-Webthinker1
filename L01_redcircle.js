@@ -8,6 +8,7 @@ function draw(){
     noStroke(); //no outline
     ellipse(300,400,50,50);
     fill('yellow');
+    ellipse(300,400,50,50);
     
     // Todo: Challenge 3 Traffic Light
 }
