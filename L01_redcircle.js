@@ -4,9 +4,9 @@ function setup(){
 }
 
 function draw(){
-    fill(255, 0, 0); //255,0,0
+    fill('red'); //255,0,0
     noStroke(); //no outline
-    ellipse(300,400,50,50);
+    ellipse(300,100,50,50);
     fill('yellow');
     ellipse(300,100,50,50);
     fill('green'); //255,0,0
