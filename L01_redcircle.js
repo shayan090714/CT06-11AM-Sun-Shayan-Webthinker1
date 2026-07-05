@@ -7,7 +7,7 @@ function draw(){
     fill('red'); //255,0,0
     noStroke(); //no outline
     ellipse(300,100,50,50);
-    fill('yellow');
+    fill('orange');
     ellipse(300,200,50,50);
     fill('green'); //255,0,0
     ellipse(300,300,50,50);
