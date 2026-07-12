@@ -13,7 +13,7 @@ function draw() {
   circle(100,100,40,25)
   circle(200,100,40,25)
   fill("white")
-  Rect(50,100)
+  rect(50,100)
   fill("grey")
   // Challenge 1: An eye using ellipse() function
 
