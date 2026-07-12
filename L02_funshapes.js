@@ -7,7 +7,8 @@ function setup(){
 }
 
 function draw() {
-  fill()
+  fill("gold")
+  circle
   // Challenge 1: An eye using ellipse() function
 
   // Challenge 2: A face using circle() function
