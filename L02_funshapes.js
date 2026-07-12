@@ -2,7 +2,7 @@
 Task 1: Add the setup() function
 */
 function setup(){
-  createCanvas(300,600);
+  createCanvas(300,300);
   background("red");
 }
 
@@ -10,6 +10,7 @@ function draw() {
   ellipse(100,100,80,50);
   ellipse(200,100,80,50);
   fill("white");
+  
   
   // Challenge 1: An eye using ellipse() function
 
