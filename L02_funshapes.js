@@ -13,7 +13,7 @@ function draw() {
   circle(100,100,40,25)
   circle(200,100,40,25)
   fill("white")
-  
+  React()
   // Challenge 1: An eye using ellipse() function
 
   // Challenge 2: A face using circle() function
