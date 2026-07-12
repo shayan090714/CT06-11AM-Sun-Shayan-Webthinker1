@@ -14,7 +14,6 @@ function draw() {
   circle(200,100,40,25)
   fill("grey")
   triangle(30,75,58,20,86,75)
-  fill("white")
   // Challenge 1: An eye using ellipse() function
 
   // Challenge 2: A face using circle() function
