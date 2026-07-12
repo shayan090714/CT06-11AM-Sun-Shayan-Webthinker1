@@ -10,7 +10,7 @@ function draw() {
   ellipse(100,100,80,50)
   ellipse(100,100,80,50)
   fill("gold")
-  circle(80,80,100)
+  
   // Challenge 1: An eye using ellipse() function
 
   // Challenge 2: A face using circle() function
