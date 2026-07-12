@@ -10,7 +10,7 @@ function draw() {
   ellipse(100,100,80,50);
   ellipse(200,100,80,50);
   fill("white");
-  circle(50,100,80,50)
+  circle(50,100,40,25)
   circle(150,100,80,50)
   fill("black")
   
