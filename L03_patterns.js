@@ -1,11 +1,11 @@
 function setup() {
-    createCanvas(600,200);
+    createCanvas(900,200);
     background(220);
     noLoop(); // Stops continuous drawing
   }
   
 function draw() {
-  let spacing = 50;
+  let spacing = 100;
   // Recap 1: Repeating Circles
 for(let i=0; i<10; i++){
   fill(255-(i*50));
