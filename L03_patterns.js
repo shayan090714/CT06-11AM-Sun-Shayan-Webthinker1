@@ -9,12 +9,7 @@ function draw() {
 for(let i=0; i<10; i++){
   fill(255-(i*50));
   square(50 + i*50,100,40);
-
 }
-// circle(75,200,100);
-// circle(225,200,100);
-// circle(375,200,100);
-// circle(575,200,100)
 
   // Task 1: Colour Gradient
 
