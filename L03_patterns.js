@@ -8,7 +8,7 @@ function draw() {
   let spacing = 75;
   // Recap 1: Repeating Circles
 for(let i=0; i<10; i++){
-  fill
+  fill(colorvalue)
   // fill(255-(i*50));
   square( spacing+ i*spacing ,100,40);
 }
