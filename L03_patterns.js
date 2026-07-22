@@ -18,17 +18,18 @@ function draw() {
   // Task 1: Colour Gradient
 
   // Task 2: Colour Loop
- for(let i=0;i<10;i++){
-    if(i%4 ===0){
-      fill(0,0,0);
-    }else if(i%4===1){
-      fill(255,0,0);
-    }else if(i%4===2){
-      fill(0,255,0);
-    }else{
-      fill(0,0,255);
-    }
-    //your task add in a line to generate circle
-    circle(50+i*50,300,50);
-  }
-}
+//  for(let i=0;i<10;i++){
+//     if(i%4 ===0){
+//       fill(0,0,0);
+//     }else if(i%4===1){
+//       fill(255,0,0);
+//     }else if(i%4===2){
+//       fill(0,255,0);
+//     }else{
+//       fill(0,0,255);
+//     }
+//     //your task add in a line to generate circle
+//     circle(50+i*50,300,50);
+//   }
+
+ }
