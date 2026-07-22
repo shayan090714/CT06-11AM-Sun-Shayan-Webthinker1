@@ -32,5 +32,6 @@ function draw() {
 //     circle(50+i*50,300,50);
 //   }
 let circleDiameter = 30
+let numCircle = 5
 let
  }
