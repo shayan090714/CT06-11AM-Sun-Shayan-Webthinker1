@@ -1,4 +1,4 @@
-colorValue = 0;
+let colorValue = 0;
 function setup() {
     createCanvas(900,200);
     background(220);
