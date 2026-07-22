@@ -38,6 +38,8 @@ let startX = width/2 - totalWidth/2
 for(let i=0;i<6;i++){
   if(i%2===0){
     fill(225)
-  }else{}
+  }else{
+    fill(0)
+  }
 }
  }
