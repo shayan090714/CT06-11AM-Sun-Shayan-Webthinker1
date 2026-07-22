@@ -11,7 +11,7 @@ for(let i=0; i<10; i++){
   fill(colorValue)
   // fill(255-(i*50));
   circle( 50+ i*50 ,100,40);
-  colorValue +-1
+  colorValue +=1
 }
 
   // Task 1: Colour Gradient
