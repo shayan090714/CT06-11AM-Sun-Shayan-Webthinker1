@@ -38,9 +38,9 @@ let startX = (width-totalWidth/2)+circleDiameter/2;
 let startY = (height-totalWidth/2)+circleDiameter/2;
 for(let i=0;i<6;i++){
   if(i%2===0){
-    fill(225)
+    fill(225,0,255)
   }else{
-    fill(0)
+    fill(0,255,0)
   }
   circle(startX + i*circleDiameter,300,circleDiameter)
 }
