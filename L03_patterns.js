@@ -41,6 +41,6 @@ for(let i=0;i<6;i++){
   }else{
     fill(0)
   }
-  circle(start)
+  circle(startX)
 }
  }
