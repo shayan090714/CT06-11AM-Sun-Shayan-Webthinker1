@@ -5,7 +5,7 @@ function setup() {
   }
   
 function draw() {
-  let spacing = 100;
+  let spacing = 50;
   // Recap 1: Repeating Circles
 for(let i=0; i<10; i++){
   fill(255-(i*50));
