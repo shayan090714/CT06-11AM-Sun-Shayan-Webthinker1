@@ -7,7 +7,7 @@ function setup() {
 function draw() {
   // Recap 1: Repeating Circles
 for(let i=0; i<5; i++){
-  
+  CSSNumericValue()
 }
 // circle(75,200,100);
 // circle(225,200,100);
