@@ -1,3 +1,4 @@
+
 function setup() {
     createCanvas(900,200);
     background(220);
@@ -10,7 +11,7 @@ function draw() {
 // for(let i=0; i<10; i++){
   fill(colorValue)
   // fill(255-(i*50));
-  circle( 50+ 100*50 ,100,40);
+  circle( 100 ,100,40);
   colorValue +=1
 
 
