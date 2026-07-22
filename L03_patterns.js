@@ -7,7 +7,7 @@ function setup() {
 function draw() {
   // Recap 1: Repeating Circles
 for(let i=0; i<10; i++){
-  fill((i*50));
+  fill(255-(i*50));
   square(50 + i*50,100,40);
 
 }
