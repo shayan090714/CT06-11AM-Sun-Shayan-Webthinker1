@@ -9,10 +9,10 @@ function draw() {
   // let spacing = 75;
   // Recap 1: Repeating Circles
 // for(let i=0; i<10; i++){
-  fill(colorValue)
-  // fill(255-(i*50));
-  circle( 100 ,100,40);
-  colorValue +=1
+  // fill(colorValue)
+  // // fill(255-(i*50));
+  // circle( 100 ,100,40);
+  // colorValue +=1
 
 
   // Task 1: Colour Gradient
