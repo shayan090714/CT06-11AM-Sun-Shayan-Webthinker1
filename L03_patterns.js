@@ -34,5 +34,5 @@ function draw() {
 let circleDiameter = 30
 let numCircle = 5
 let totalWidth = circleDiameter * numCircle
-let
+let startX = totalWidth/2
  }
