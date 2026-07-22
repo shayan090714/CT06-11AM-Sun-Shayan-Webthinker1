@@ -31,5 +31,6 @@ function draw() {
 //     //your task add in a line to generate circle
 //     circle(50+i*50,300,50);
 //   }
-
+let circleDiameter = 30
+let
  }
