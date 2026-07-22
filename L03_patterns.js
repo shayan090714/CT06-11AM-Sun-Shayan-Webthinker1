@@ -37,6 +37,7 @@ let totalWidth = circleDiameter * numCircle
 let startX = (width-totalWidth/2)+circleDiameter/2;
 let startY = (height-totalWidth/2)+circleDiameter/2;
 for(let row = 0;row<numofcircle;row++){
+let y
 for(let i=0;i<6;i++){
   if(i%2===0){
     fill(225,0,255)
