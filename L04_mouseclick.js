@@ -3,6 +3,7 @@ let shapeColor = "blue";
 function setup(){
     createCanvas(600,600)
     background('lightblue')
+    noStroke()
 }
 function draw(){
     // let xpos = 550;
