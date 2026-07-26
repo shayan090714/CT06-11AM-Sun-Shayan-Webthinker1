@@ -5,5 +5,5 @@ function setup(){
 function draw(){
     for (let i = 0;i<100;i++)
         circle(5*i+50,200,100)
-    
+    if (2%0===1);
 }
