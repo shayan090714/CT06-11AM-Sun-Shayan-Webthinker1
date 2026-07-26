@@ -19,4 +19,7 @@ function draw(){
     function mousePressed(){
         shapecolour = ('blue');
     }
+    function mouseReleased(){
+        
+    }
 }
