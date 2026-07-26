@@ -3,8 +3,8 @@ function setup(){
     background('lightblue')
 }
 function draw(){
-    let xpos = 50;
-    let ypos = 50;
+    let xpos = 550;
+    let ypos = 550;
     let ggcolour = 0;
     for (let i = 0;i<5;i++){
         fill(0);
