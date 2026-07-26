@@ -24,4 +24,4 @@ function draw(){
     function mouseReleased(){
         shapeColor = "white";
     }
-    
+    function mouseMoved()
