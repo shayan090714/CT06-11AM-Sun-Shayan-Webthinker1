@@ -5,7 +5,7 @@ function setup(){
     background('lightblue')
     noStroke()
 }
-function draw(){}
+function draw(){
     // let xpos = 550;
     // let ypos = 50;
     // let ggcolour = 0;
@@ -29,3 +29,4 @@ function draw(){}
         fill(shapeColor);
         circle(mouseX,mouseY,50);
     }
+}
