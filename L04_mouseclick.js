@@ -25,5 +25,5 @@ function draw(){
         shapeColor = "white";
     }
     function mouseMoved(){
-        circle(muse)
+        circle(musex,mousey,10)
     }
