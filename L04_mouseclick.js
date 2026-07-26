@@ -13,5 +13,6 @@ function draw(){
     //     ypos = ypos + 50;
     //     ggcolour = ggcolour + 50
     // }  
-    colour = ('blue') 
+    colour = ('blue');
+     
 }
