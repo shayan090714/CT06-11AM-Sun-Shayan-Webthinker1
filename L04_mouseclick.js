@@ -1,4 +1,4 @@
-let shapec
+let shapecolour = ()
 
 function setup(){
     createCanvas(600,600)
