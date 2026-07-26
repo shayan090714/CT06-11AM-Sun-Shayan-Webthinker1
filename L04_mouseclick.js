@@ -3,6 +3,6 @@ function setup(){
     background('pink')
 }
 function draw(){
-    for (let i = 0;i<5;i++)
-        circle(100*i+50,200,100)
+    for (let i = 0;i<1;i++)
+        circle(5*i+50,200,100)
 }
