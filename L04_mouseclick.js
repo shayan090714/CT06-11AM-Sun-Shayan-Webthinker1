@@ -5,11 +5,12 @@ function setup(){
 function draw(){
     let xpos = 50;
     let ypos = 50;
-    let ggcolour
+    let ggcolour = 0;
     for (let i = 0;i<5;i++){
         fill(0);
         circle(xpos,ypos,50);
         xpos = xpos + 50;
         ypos = ypos + 50;
+        ggcolour
     }   
 }
