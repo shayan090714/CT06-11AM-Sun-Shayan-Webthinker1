@@ -6,9 +6,9 @@ function draw(){
     for (let i = 0;i<100;i++)
         circle(5*i+50,200,100)
     if (i%2===1){
-         fill ('black')
+         fill (220)
     }
     else{
-        fill('white')
+        fill(0)
     }
 }
