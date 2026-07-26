@@ -20,6 +20,6 @@ function draw(){
         shapecolour = ('blue');
     }
     function mouseReleased(){
-        shapecolour = ('red')
+        shapecolour = ('red');
     }
 }
