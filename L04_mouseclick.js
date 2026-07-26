@@ -1,6 +1,6 @@
 function setup(){
     createCanvas(600,600)
-    background('blue')
+    background('blackpink')
 }
 function draw(){
     for (let i = 0;i<100;i++)
