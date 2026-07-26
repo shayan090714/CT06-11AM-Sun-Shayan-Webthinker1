@@ -6,7 +6,7 @@ function draw(){
     let xpos = 550;
     let ypos = 50;
     let ggcolour = 0;
-    for (let i = 0;i<5;i++){
+    for (let i = 0;i<10;i++){
         fill(0,ggcolour,0);
         circle(xpos,ypos,50);
         xpos = xpos - 50;
