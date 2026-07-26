@@ -15,8 +15,8 @@ function draw(){
     //     ypos = ypos + 50;
     //     ggcolour = ggcolour + 50
     // }  
-    colour = (shapeColor);
-    circle(300,200,100);
+    fill(shapeColor);
+    circle();
     function mousePressed(){
         shapeColor = ("black");
     }
