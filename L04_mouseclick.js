@@ -20,7 +20,7 @@ function draw(){
     function mousePressed(){
         shapeColor = ('blue');
     function mouseReleased(){
-        shapecolor = ('red');
+        shapeColor = ('red');
     }
     
     }
