@@ -5,7 +5,7 @@ function setup(){
     background('lightblue')
     noStroke()
 }
-function draw(){
+function draw(){}
     // let xpos = 550;
     // let ypos = 50;
     // let ggcolour = 0;
@@ -18,13 +18,14 @@ function draw(){
     // }  
     // fill(shapeColor);
     // circle(width/2,height/2,200);
-    }
-    function mousePressed(){
-        shapeColor = color(random(0,255));
-    }
-    function mouseReleased(){
-        shapeColor = "white";
-    }
-    function mouseMoved(){
+    // }
+    // function mousePressed(){
+    //     shapeColor = color(random(0,255));
+    // }
+    // function mouseReleased(){
+    //     shapeColor = "white";
+    // }
+    function mouseDragged(){
+        fill(shapeColor);
         circle(mouseX,mouseY,50);
     }
