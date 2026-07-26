@@ -21,6 +21,6 @@ function draw(){
         shapeColor = (random(0,255));
     }
     function mouseReleased(){
-        shapeColor = (random(0,255));
+        shapeColor = "white";
     }
 }
