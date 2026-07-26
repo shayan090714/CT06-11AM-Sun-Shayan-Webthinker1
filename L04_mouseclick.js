@@ -9,6 +9,6 @@ function draw(){
          fill ('black')
     }
     else{
-        
+        fill('white')
     }
 }
