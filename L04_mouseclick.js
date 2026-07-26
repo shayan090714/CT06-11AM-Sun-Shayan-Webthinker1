@@ -9,6 +9,6 @@ function draw(){
          fill (220,0,220);
     }
     else{
-        fill(0)
+        fill(0,220,0);
     }
 }
