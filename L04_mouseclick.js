@@ -4,5 +4,5 @@ function setup(){
 }
 function draw(){
     for (let i = 0;i<5;i++)
-        circle(50*i+50,200,100)
+        circle(100*i+50,200,100)
 }
