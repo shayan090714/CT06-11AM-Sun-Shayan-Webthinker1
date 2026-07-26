@@ -17,6 +17,6 @@ function draw(){
     // }  
     colour = (shapecolour);
     function mousePressed(){
-        
+        shapecolour = ('')
     }
 }
