@@ -15,7 +15,7 @@ function draw(){
     //     ypos = ypos + 50;
     //     ggcolour = ggcolour + 50
     // }  
-    circle()
+    circle(50,200,100)
     colour = (shapecolour);
     function mousePressed(){
         shapecolour = ('blue');
