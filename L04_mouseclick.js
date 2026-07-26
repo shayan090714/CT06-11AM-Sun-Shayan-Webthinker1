@@ -15,6 +15,7 @@ function draw(){
     //     ypos = ypos + 50;
     //     ggcolour = ggcolour + 50
     // }  
+    CSSNumericValue()
     colour = (shapecolour);
     function mousePressed(){
         shapecolour = ('blue');
