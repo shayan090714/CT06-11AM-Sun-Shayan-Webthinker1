@@ -19,9 +19,9 @@ function draw(){
     circle(300,200,100);
     function mousePressed(){
         shapeColor = ('blue');
+    
+    }
     function mouseReleased(){
         shapeColor = ('red');
-    }
-    
     }
 }
