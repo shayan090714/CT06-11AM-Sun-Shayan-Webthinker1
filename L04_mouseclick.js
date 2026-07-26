@@ -16,5 +16,7 @@ function draw(){
     //     ggcolour = ggcolour + 50
     // }  
     colour = (shapecolour);
-    
+    function mousePressed(){
+        sh
+    }
 }
