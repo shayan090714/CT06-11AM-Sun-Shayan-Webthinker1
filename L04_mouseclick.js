@@ -1,4 +1,4 @@
-let shapecolour = ()
+let shapecolour = ('blue');
 
 function setup(){
     createCanvas(600,600)
@@ -15,6 +15,6 @@ function draw(){
     //     ypos = ypos + 50;
     //     ggcolour = ggcolour + 50
     // }  
-    colour = ('blue');
-
+    colour = (shapecolour);
+    
 }
