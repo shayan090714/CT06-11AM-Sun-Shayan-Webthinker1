@@ -36,4 +36,8 @@ function draw(){
         showCircle(width/2,height/2,size);
     }
 }
-function keyPressed()
+function keyPressed(){
+    if(key === 'c')
+        
+
+}
