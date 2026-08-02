@@ -43,7 +43,7 @@ function keyPressed(){
         showCircle=!showCircle;
 }
 function keyPressed(){
-    if(key === 'c')
+    if(key === 's')
         showCircle=!showCircle;
 }
 function keyPressed(){
