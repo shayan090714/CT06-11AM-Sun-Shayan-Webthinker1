@@ -48,5 +48,5 @@ function keyPressed(){
 }
 function keyPressed(){
     if(key === 't')
-        showTri=!showCircle;
+        showTri=!showTri;
 }
