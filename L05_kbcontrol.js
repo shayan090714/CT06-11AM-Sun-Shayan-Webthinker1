@@ -54,6 +54,7 @@ function keyPressed(){
     if(key === 'r'){
         showRect=!showRect;
         }
-    if(key === 's')
+    if(key === 's'){
         showSquare=!showSquare;
+    }
 }
