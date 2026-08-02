@@ -36,7 +36,7 @@ function draw(){
     background("grey");
     if (showCircle){
         fill("white")
-        circle(width/2,height/2,size,size);
+        circle(width/2,height/2,size);
     }
     if (showRect){
         fill("red")
