@@ -1,6 +1,5 @@
 let size = 5;
-let colour = ""
-
+let colour = "blue";
 
 function setup(){
     createCanvas(600,600)
