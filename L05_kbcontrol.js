@@ -1,4 +1,5 @@
-let size = 5
+let size = 5;
+let colour = ""
 
 
 function setup(){
