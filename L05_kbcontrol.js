@@ -28,4 +28,5 @@ function mousePressed(){
     }
     function draw(){
         background("skyblue")
+        Reflect()
     }
