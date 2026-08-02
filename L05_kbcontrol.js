@@ -50,12 +50,10 @@ function draw(){
 function keyPressed(){
     if(key === 'c')
         showCircle=!showCircle;
-}
-function keyPressed(){
+
     if(key === 'r')
         showRect=!showRect;
-}
-function keyPressed(){
+
     if(key === 's')
         showSquare=!showSquare;
 }
