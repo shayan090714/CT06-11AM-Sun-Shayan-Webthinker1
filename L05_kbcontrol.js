@@ -51,7 +51,7 @@ function keyPressed(){
     print(key)
     print(keyCode)
     if(keyCode===UP_ARROW) {
-        print("I have got UP ARROW key")
+        
     }
     
 }
