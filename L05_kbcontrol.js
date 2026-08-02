@@ -56,6 +56,6 @@ function keyPressed(){
         fill("red");
     }
     if(keyCode===DOWN_ARROW) {
-        fill"black";
+        colour="black";
     }
 }
