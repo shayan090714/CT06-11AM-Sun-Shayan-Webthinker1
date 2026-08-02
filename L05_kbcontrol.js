@@ -48,12 +48,12 @@ function draw(){
     }
 }
 function keyPressed(){
-    if(key === 'c')
+    if(key === 'c'){
         showCircle=!showCircle;
-
-    if(key === 'r')
+    }
+    if(key === 'r'){
         showRect=!showRect;
-
+        }
     if(key === 's')
         showSquare=!showSquare;
 }
