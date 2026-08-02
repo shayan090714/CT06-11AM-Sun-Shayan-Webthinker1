@@ -28,5 +28,5 @@ function mousePressed(){
     }
     function draw(){
         background("skyblue")
-        rect(width)
+        rect(width/2)
     }
