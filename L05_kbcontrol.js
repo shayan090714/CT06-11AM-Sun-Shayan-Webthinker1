@@ -34,8 +34,8 @@ function setup(){
 }
 function draw(){
      background("grey");
-     if (showCircle){
-         fill("white")
+    //  if (showCircle)
+         fill(colour)
          circle(width/2,height/2,size);
      }
     // if (showRect){
@@ -46,7 +46,6 @@ function draw(){
     //     fill("blue")
     //     rect(width/2,height/2,size,size);
     // }
-}
 function keyPressed(){
     print(key);
     print(keyCode);
