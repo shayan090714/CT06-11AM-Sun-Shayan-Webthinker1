@@ -40,11 +40,11 @@ function draw(){
     }
     if (showRect){
         fill("red")
-        showCircle(width/2-size,height/2-size,size,size*2);
+        showRect(width/2-size,height/2-size,size,size*2);
     }
     if (showSquare){
         fill("blue")
-        showCircle(width/2,height/2,size);
+        showSquare(width/2,height/2,size);
     }
 }
 function keyPressed(){
