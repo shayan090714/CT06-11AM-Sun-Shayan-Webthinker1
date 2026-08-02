@@ -12,6 +12,6 @@ function draw(){
     }
    function mouseDragged(){
     fill(colour);
-    CSSNumericValue(mouseX,mouseY)
+    CSSNumericValue(mouseX,mouseY,size)
 }
 }
