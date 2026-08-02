@@ -48,11 +48,14 @@ function draw(){
     // }
 }
 function keyPressed(){
-    print(key)
+    print(key);
+    print(keyCode);
+
+
     if(keyCode===UP_ARROW) {
-        fill("red")
+        fill("red");
     }
     if(keyCode===DOWN_ARROW) {
-        fill("black")
+        fill("black");
     }
 }
