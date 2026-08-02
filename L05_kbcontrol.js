@@ -32,5 +32,7 @@ function setup(){
 }
 function draw(){
     background("skyblue");
-    if (showCircle)
+    if (showCircle){
+        showCircle(width)
+    }
 }
