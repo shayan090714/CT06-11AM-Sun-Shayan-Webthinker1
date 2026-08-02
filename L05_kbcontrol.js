@@ -33,11 +33,11 @@ function setup(){
     background("grey")
 }
 function draw(){
-    // background("grey");
-    // if (showCircle){
-    //     fill("white")
-    //     circle(width/2,height/2,size);
-    // }
+     background("grey");
+     if (showCircle){
+         fill("white")
+         circle(width/2,height/2,size);
+     }
     // if (showRect){
     //     fill("red")
     //     rect(width/2-size,height/2-size,size,size*2);
