@@ -42,3 +42,11 @@ function keyPressed(){
     if(key === 'c')
         showCircle=!showCircle;
 }
+function keyPressed(){
+    if(key === 'c')
+        showCircle=!showCircle;
+}
+function keyPressed(){
+    if(key === 'c')
+        showCircle=!showCircle;
+}
