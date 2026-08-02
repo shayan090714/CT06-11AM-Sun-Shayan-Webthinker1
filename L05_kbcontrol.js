@@ -35,7 +35,7 @@ function setup(){
 function draw(){
     background("skyblue");
     if (showCircle){
-        FileList()
+        fill("white")
         showCircle(width/2,height/2,size);
     }
 }
