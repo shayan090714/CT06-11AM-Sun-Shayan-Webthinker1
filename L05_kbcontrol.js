@@ -48,10 +48,10 @@ function draw(){
     // }
 }
 function keyPressed(){
-    print(key)
-    print(keyCode)
     if(keyCode===UP_ARROW) {
         fill("red")
     }
-    
+    if(keyCode===DOWN_ARROW) {
+        fill("black")
+    }
 }
