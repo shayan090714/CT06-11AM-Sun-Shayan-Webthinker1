@@ -14,5 +14,5 @@ function draw(){
     fill(colour);
     CSSNumericValue(mouseX,mouseY,size);
     size = size + 0.5
-}
+    }
 }
