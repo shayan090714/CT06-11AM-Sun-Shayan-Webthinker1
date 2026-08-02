@@ -25,7 +25,7 @@ let size = 250;
 let colour = "blue";
 let showCircle = false;
 let showRect = false;
-let showTri = false;
+let showSquare = false;
 
 
 function setup(){
