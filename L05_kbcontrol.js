@@ -24,7 +24,7 @@
 let size = 250;
 let colour = "blue";
 let showCircle = false;
-let 
+let showRect = false
 
 
 function setup(){
