@@ -42,7 +42,7 @@ function draw(){
         fill("red")
         showCircle(width/2,height/2,size);
     }
-    if (showTri){
+    if (showSquare){
         fill("blue")
         showCircle(width/2,height/2,size);
     }
