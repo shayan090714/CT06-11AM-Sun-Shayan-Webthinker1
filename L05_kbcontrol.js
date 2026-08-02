@@ -22,4 +22,4 @@
 
 
 
-let color    
+let colour = "blue"    
