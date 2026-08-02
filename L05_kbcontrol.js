@@ -33,7 +33,7 @@ function setup(){
     background("grey")
 }
 function draw(){
-    background("skyblue");
+    background("grey");
     if (showCircle){
         fill("white")
         showCircle(width/2,height/2,size);
