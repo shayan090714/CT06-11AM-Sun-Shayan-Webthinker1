@@ -22,11 +22,4 @@ function mousePressed(){
 
 
 
-    function setup(){
-        createCanvas(600,400)
-        background("grey")
-    }
-    function draw(){
-        background("skyblue")
-        rect(width/2,height/2,size/2)
-    }
+    
