@@ -38,6 +38,14 @@ function draw(){
         fill("white")
         showCircle(width/2,height/2,size);
     }
+    if (showCircle){
+        fill("white")
+        showCircle(width/2,height/2,size);
+    }
+    if (showCircle){
+        fill("white")
+        showCircle(width/2,height/2,size);
+    }
 }
 function keyPressed(){
     if(key === 'c')
