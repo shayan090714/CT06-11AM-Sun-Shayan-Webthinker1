@@ -48,6 +48,7 @@ function draw(){
     // }
 }
 function keyPressed(){
+    print(key)
     if(keyCode===UP_ARROW) {
         print("I have got UP ARROW key")
     }
