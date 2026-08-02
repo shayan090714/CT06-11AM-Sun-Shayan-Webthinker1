@@ -44,7 +44,7 @@ function draw(){
     }
     if (showSquare){
         fill("blue")
-        showSquare(width/2,height/2,size,size);
+        square(width/2,height/2,size,size);
     }
 }
 function keyPressed(){
