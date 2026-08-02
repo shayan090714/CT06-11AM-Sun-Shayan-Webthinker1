@@ -6,13 +6,6 @@ function setup(){
     background('grey')
 }
 function draw(){
-    function mousePressed(){
-        size = 5;
-        colour = color(random(0,255),random(0,255),random(0,255));
-    }
-    function mouseDragged(){
-    fill(colour);
-    circle(mouseX,mouseY,size);
-    size = size + 0.5;
-    }
+    
 }
+
