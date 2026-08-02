@@ -21,7 +21,8 @@
 //     }
 
 
-
+let size = 250;
+let colour = "blue"
 
 
 function setup(){
@@ -29,5 +30,5 @@ function setup(){
     background("skyblue")
 }
 function draw(){
-    
+
 }
