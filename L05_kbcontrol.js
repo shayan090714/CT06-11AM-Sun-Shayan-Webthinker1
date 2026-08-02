@@ -27,7 +27,7 @@ let showCircle = false;
 let showRect = false;
 let showSquare = false;
 
-
+let xpos = 0
 function setup(){
     createCanvas(600,400)
     background("grey")
