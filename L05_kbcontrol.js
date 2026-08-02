@@ -25,5 +25,5 @@
 
 
 function setup(){
-    
+    background("skyblue")
 }
