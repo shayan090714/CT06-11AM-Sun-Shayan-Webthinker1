@@ -57,5 +57,5 @@ function keyPressed(){
 }
 function keyPressed(){
     if(key === 't')
-        showTri=!showTri;
+        showTri=!showSquare;
 }
