@@ -30,7 +30,7 @@ let showSquare = false;
 
 function setup(){
     createCanvas(600,400)
-    background("skyblue")
+    background("grey")
 }
 function draw(){
     background("skyblue");
