@@ -40,7 +40,7 @@ function draw(){
     }
     if (showRect){
         fill("red")
-        Rect(width/2-size,height/2-size,size,size*2);
+        rectangle(width/2-size,height/2-size,size,size*2);
     }
     if (showSquare){
         fill("blue")
