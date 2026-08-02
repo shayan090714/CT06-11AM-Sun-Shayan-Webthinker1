@@ -6,5 +6,7 @@ function setup(){
     background('grey')
 }
 function draw(){
-    
+    function mousePressed(){
+        
+    }
 }
