@@ -42,8 +42,8 @@ function draw(){
         fill("red")
         showCircle(width/2,height/2,size);
     }
-    if (showCircle){
-        fill("white")
+    if (showTri){
+        fill("blue")
         showCircle(width/2,height/2,size);
     }
 }
