@@ -8,6 +8,6 @@ function setup(){
 function draw(){
     function mousePressed(){
         size = 5;
-        colour = color(random)
+        colour = color(random(0,225))
     }
 }
