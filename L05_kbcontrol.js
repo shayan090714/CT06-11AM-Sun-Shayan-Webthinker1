@@ -25,5 +25,6 @@
 
 
 function setup(){
+    createCanvas()
     background("skyblue")
 }
