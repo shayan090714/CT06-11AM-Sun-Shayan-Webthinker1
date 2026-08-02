@@ -48,7 +48,7 @@ function draw(){
     // }
 }
 function keyPressed(){
-    
+    print(key)
     if(keyCode===UP_ARROW) {
         fill("red")
     }
