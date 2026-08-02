@@ -27,5 +27,5 @@ function mousePressed(){
         background("grey")
     }
     function draw(){
-        
+        background("skyblue")
     }
