@@ -53,7 +53,7 @@ function keyPressed(){
 
 
     if(keyCode===UP_ARROW) {
-        colour="red"
+        colour="red";
     }
     if(keyCode===DOWN_ARROW) {
         colour="black";
