@@ -38,8 +38,8 @@ function draw(){
         fill("white")
         showCircle(width/2,height/2,size);
     }
-    if (showCircle){
-        fill("white")
+    if (showRect){
+        fill("red")
         showCircle(width/2,height/2,size);
     }
     if (showCircle){
