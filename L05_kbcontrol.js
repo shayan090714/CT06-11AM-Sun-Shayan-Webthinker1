@@ -22,8 +22,8 @@
 
 
 let size = 250;
-let colour = "blue"
-let showCircle = false
+let colour = "blue";
+let showCircle = false;
 
 
 function setup(){
