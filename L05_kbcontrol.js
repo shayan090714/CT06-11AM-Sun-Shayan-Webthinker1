@@ -52,10 +52,10 @@ function keyPressed(){
         showCircle=!showCircle;
 }
 function keyPressed(){
-    if(key === 's')
+    if(key === 'r')
         showRect=!showRect;
 }
 function keyPressed(){
-    if(key === 't')
+    if(key === 's')
         showSquare=!showSquare;
 }
