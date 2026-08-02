@@ -44,7 +44,7 @@ function keyPressed(){
 }
 function keyPressed(){
     if(key === 's')
-        showCircle=!showCircle;
+        showRect=!showRect;
 }
 function keyPressed(){
     if(key === 'c')
