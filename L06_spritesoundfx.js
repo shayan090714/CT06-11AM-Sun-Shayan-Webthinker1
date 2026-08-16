@@ -45,4 +45,3 @@ function setup(){
         bgm.play();
     }
  }
- 
