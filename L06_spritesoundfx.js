@@ -27,7 +27,7 @@ function setup(){
         xpos = xpos - 2;
     }
     if(keyIsDown(UP_ARROW)){
-        ypos = ypos + 2;
+        ypos = ypos - 2;
     }
     if(keyIsDown(DOWN_ARROW)){
         ypos = ypos + 2;
