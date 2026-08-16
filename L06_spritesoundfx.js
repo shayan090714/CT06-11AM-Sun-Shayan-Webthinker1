@@ -1,6 +1,8 @@
 let bgm;
 let pico;
-
+function preload(){
+    
+}
 
 
 function setup(){
