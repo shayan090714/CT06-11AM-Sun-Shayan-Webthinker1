@@ -11,5 +11,5 @@ function setup(){
     
  }
  function draw(){
-    image(pico,0,0,)
+    image(pico,0,0,110,133)
  }
