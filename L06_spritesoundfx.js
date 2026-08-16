@@ -1,5 +1,6 @@
 let bgm;
 let pico;
+let xpos;
 function preload(){
     pico = loadImage("")
 }
