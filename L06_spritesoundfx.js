@@ -31,4 +31,5 @@ function setup(){
     if(keyIsDown(DOWN_ARROW)){
         ypos = ypos - 2;
     }
+    if (key === 's')
  }
