@@ -31,6 +31,8 @@ let showSquare = false;
 function setup(){
     createCanvas(600,400)
     background("grey")
+
+    let xpos
 }
 function draw(){
      background("grey");
