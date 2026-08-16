@@ -42,7 +42,7 @@ function draw(){
      background("grey");
     //  if (showCircle)
         //  fill(colour);
-         circle(width/2,height/2,size);
+         circle(width/ypos,size);
 
      }
     // if (showRect){
