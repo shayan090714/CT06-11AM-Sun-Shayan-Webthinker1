@@ -35,7 +35,7 @@ function setup(){
  }
  function keyPressed(){
     if(keycode===32){
-        sfx.play()
+        sfx.play();
     }
 
     if (key === 's'){
