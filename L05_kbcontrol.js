@@ -27,7 +27,8 @@
 // let showRect = false;
 // let showSquare = false;
 
-
+let xpos = 0;
+let ypos = 0;
 
 
 function setup(){
