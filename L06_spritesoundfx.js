@@ -9,7 +9,7 @@ function preload(){
 function setup(){
      createCanvas(600,400);
      background('lightblue');
-    
+    xpos = 0;
  }
  function draw(){
     image(pico,0,0,110,133)
