@@ -71,6 +71,6 @@ function draw(){
         ypos = ypos + 2;
     }
 
-    xpos = constra
+    xpos = constrain
 
 }
