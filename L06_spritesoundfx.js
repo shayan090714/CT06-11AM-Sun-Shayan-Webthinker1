@@ -9,7 +9,7 @@ function preload(){
 
 
 function setup(){
-     createCanvas(600,400);
+     createCanvas(350,350);
      background('lightblue');
     xpos = 0;
     bgm.loop()
