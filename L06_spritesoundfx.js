@@ -30,7 +30,7 @@ function setup(){
         ypos = ypos + 2;
     }
     if(keyIsDown(DOWN_ARROW)){
-        ypos = ypos - 2;
+        ypos = ypos + 2;
     }
     
  }
