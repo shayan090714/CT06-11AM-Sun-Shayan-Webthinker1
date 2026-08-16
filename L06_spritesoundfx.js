@@ -4,7 +4,7 @@ let xpos,ypos;
 let bgm,sfx
 function preload(){
     pico = loadImage("assets/pico-a.png");
-    bgm = loadSound("assets/bossanova.mp3")
+    bgm = loadSound("assets/bossaNova.mp3")
 }
 
 
