@@ -44,7 +44,7 @@ function draw(){
          fill(colour);
          circle(xpos,ypos,size);
 
-     }
+     
     // if (showRect){
     //     fill("red")
     //     rect(width/2-size,height/2-size,size,size*2);
@@ -70,3 +70,4 @@ function draw(){
     if(keyCode===DOWN_ARROW) {
         ypos = ypos + 2;
     }
+}
