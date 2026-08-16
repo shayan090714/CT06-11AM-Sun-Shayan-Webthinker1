@@ -32,6 +32,6 @@ function setup(){
         ypos = ypos - 2;
     }
     if (key === 's'){
-        bgm.stop()
+        bgm.stop();
     }
  }
