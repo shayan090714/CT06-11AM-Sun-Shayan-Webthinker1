@@ -57,8 +57,8 @@ function keyPressed(){
     print(key);
     print(keyCode);
 
-    if(keyCode===R_ARROW) {
-        ypos = ypos +2;
+    if(keyCode===RIGHT_ARROW) {
+        xpos = xpos +2;
     }
     if(keyCode===DOWN_ARROW) {
         ypos = ypos - 2;
