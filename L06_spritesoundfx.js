@@ -7,7 +7,7 @@ function preload(){
 
 
 function setup(){
-     createCanvas(350,350);
+     createCanvas(600,400);
      background('lightblue');
     xpos = 0;
  }
