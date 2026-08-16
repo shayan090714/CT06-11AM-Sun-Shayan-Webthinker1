@@ -1,7 +1,7 @@
 let bgm;
 let pico;
 function preload(){
-
+    pico = loadImage("")
 }
 
 
