@@ -21,7 +21,7 @@
 //     }
 
 
-// let size = 250;
+let size = 25;
 let colour = "white";
 // let showCircle = false;
 // let showRect = false;
