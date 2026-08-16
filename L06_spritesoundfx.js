@@ -12,6 +12,7 @@ function setup(){
     xpos = 0;
  }
  function draw(){
-    background("lightblue")
+    background("lightblue");
     image(pico,0,0,110,133);
+    
  }
