@@ -1,4 +1,5 @@
-
+let bgm;
+let pico;
 
 
 
