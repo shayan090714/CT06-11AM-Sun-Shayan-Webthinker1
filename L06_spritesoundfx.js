@@ -12,6 +12,7 @@ function setup(){
      createCanvas(600,400);
      background('lightblue');
     xpos = 0;
+    bgm.loop()
  }
  function draw(){
     background("lightblue");
