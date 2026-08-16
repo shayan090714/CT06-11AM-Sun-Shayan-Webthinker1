@@ -5,7 +5,7 @@ let bgm,sfx
 function preload(){
     pico = loadImage("assets/pico-a.png");
     bgm = loadSound("assets/bossaNova.mp3");
-    sfx = loadSound("assests/pop.mp3");
+    sfx = loadSound("assets/pop.mp3");
 }
 
 
