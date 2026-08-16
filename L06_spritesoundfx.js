@@ -34,7 +34,7 @@ function setup(){
     
  }
  function keyPressed(){
-    i
+    if(keycode===32)
 
     if (key === 's'){
         bgm.stop();
