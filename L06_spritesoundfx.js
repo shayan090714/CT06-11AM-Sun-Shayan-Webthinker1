@@ -1,9 +1,10 @@
 let bgm;
 let pico;
 let xpos,ypos;
+let bgm,sfx
 function preload(){
     pico = loadImage("assets/pico-a.png");
-    bgm = loadSound
+    bgm = loadSound("a")
 }
 
 
