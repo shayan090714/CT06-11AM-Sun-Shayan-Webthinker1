@@ -3,6 +3,7 @@ let pico;
 let xpos;
 function preload(){
     pico = loadImage("assets/pico-a.png");
+    bgm = 
 }
 
 
