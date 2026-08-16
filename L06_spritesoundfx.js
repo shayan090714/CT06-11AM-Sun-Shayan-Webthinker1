@@ -34,5 +34,7 @@ function setup(){
     if (key === 's'){
         bgm.stop();
     }
-    
+    if (key === 'c'){
+        bgm.play();
+    }
  }
