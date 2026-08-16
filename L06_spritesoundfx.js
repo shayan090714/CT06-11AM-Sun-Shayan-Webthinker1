@@ -2,7 +2,7 @@ let bgm;
 let pico;
 let xpos;
 function preload(){
-    pico = loadImage("assets")
+    pico = loadImage("assets/pico-a.ang")
 }
 
 
