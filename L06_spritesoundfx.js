@@ -1,4 +1,3 @@
-
 let pico;
 let xpos,ypos;
 let bgm,sfx
