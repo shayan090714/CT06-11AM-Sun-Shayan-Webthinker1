@@ -53,9 +53,9 @@ function draw(){
     //     fill("blue")
     //     rect(width/2,height/2,size,size);
     // }
-function keyPressed(){
-    print(key);
-    print(keyCode);
+// function keyPressed(){
+//     print(key);
+//     print(keyCode);
 
     if(keyCode===RIGHT_ARROW) {
         xpos = xpos +2;
@@ -70,4 +70,3 @@ function keyPressed(){
     if(keyCode===DOWN_ARROW) {
         ypos = ypos - 2;
     }
-}
