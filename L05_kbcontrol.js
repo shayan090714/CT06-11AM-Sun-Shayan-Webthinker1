@@ -70,4 +70,7 @@ function draw(){
     if(keyCode===DOWN_ARROW) {
         ypos = ypos + 2;
     }
+
+    xpos = constra
+
 }
