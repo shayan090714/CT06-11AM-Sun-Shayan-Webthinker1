@@ -57,6 +57,7 @@ function keyPressed(){
     print(key);
     print(keyCode);
 
+    
 
     if(keyCode===UP_ARROW) {
         ypos = ypos +2;
