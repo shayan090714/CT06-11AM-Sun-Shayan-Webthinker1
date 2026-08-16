@@ -35,7 +35,7 @@ function setup(){
  }
  function keyPressed(){
     if(keycode===32){
-        sfx = (assets/pop.mp3)
+        sfx.play()
     }
 
     if (key === 's'){
