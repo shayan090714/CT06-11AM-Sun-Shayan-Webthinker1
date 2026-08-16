@@ -59,7 +59,7 @@ function keyPressed(){
 
 
     if(keyCode===UP_ARROW) {
-        ;
+        ypos = ypos +2;
     }
     if(keyCode===DOWN_ARROW) {
         colour="black";
