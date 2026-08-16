@@ -60,11 +60,11 @@ function draw(){
     if(keyIsDown(RIGHT_ARROW)) {
         xpos = xpos +2;
     }
-    if(keyCode===(LEFT_ARROW)) {
+    if(keyIsDown(LEFT_ARROW)) {
         xpos = xpos - 2;
     }
 
-    if(keyCode===UP_ARROW) {
+    if(keyCode===(UP_ARROW)) {
         ypos = ypos -2;
     }
     if(keyCode===DOWN_ARROW) {
