@@ -64,10 +64,10 @@ function draw(){
         xpos = xpos - 2;
     }
 
-    if(keyCode===(UP_ARROW)) {
+    if(keyIsDown(UP_ARROW)) {
         ypos = ypos -2;
     }
-    if(keyCode===DOWN_ARROW) {
+    if(keyIsDown(DOWN_ARROW)) {
         ypos = ypos + 2;
     }
 
