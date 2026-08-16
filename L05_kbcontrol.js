@@ -21,11 +21,13 @@
 //     }
 
 
-let size = 250;
-let colour = "white";
-let showCircle = false;
-let showRect = false;
-let showSquare = false;
+// let size = 250;
+// let colour = "white";
+// let showCircle = false;
+// let showRect = false;
+// let showSquare = false;
+
+
 
 
 function setup(){
