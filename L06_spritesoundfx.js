@@ -21,7 +21,7 @@ function setup(){
     if(keyIsDown(LEFT_ARROW)){
         xpos = xpos - 2;
     }
-    if(keyIsDown(RIGHT_ARROW)){
+    if(keyIsDown(UP_ARROW)){
         xpos = xpos + 2;
     }
     if(keyIsDown(RIGHT_ARROW)){
