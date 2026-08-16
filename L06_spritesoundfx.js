@@ -38,3 +38,6 @@ function setup(){
         bgm.play();
     }
  }
+ function keyPressed(){
+    
+ }
