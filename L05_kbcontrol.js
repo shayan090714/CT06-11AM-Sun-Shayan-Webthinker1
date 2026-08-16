@@ -65,8 +65,8 @@ function draw(){
     }
 
     if(keyCode===UP_ARROW) {
-        ypos = ypos +2;
+        ypos = ypos -2;
     }
     if(keyCode===DOWN_ARROW) {
-        ypos = ypos - 2;
+        ypos = ypos + 2;
     }
