@@ -57,10 +57,10 @@ function draw(){
 //     print(key);
 //     print(keyCode);
 
-    if(keyIsDown(RIGHT_ARROW) {
+    if(keyIsDown(RIGHT_ARROW)) {
         xpos = xpos +2;
     }
-    if(keyCode===LEFT_ARROW) {
+    if(keyCode===(LEFT_ARROW)) {
         xpos = xpos - 2;
     }
 
