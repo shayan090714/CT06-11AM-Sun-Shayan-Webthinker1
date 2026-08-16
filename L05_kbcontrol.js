@@ -61,7 +61,7 @@ function keyPressed(){
         xpos = xpos +2;
     }
     if(keyCode===DOWN_ARROW) {
-        ypos = ypos - 2;
+        xpos = xpos - 2;
     }
 
     if(keyCode===UP_ARROW) {
