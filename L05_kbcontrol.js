@@ -60,7 +60,7 @@ function keyPressed(){
     if(keyCode===RIGHT_ARROW) {
         xpos = xpos +2;
     }
-    if(keyCode===DOWN_ARROW) {
+    if(keyCode===LEFT_ARROW) {
         xpos = xpos - 2;
     }
 
