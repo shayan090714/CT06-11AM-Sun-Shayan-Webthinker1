@@ -62,6 +62,6 @@ function keyPressed(){
         ypos = ypos +2;
     }
     if(keyCode===DOWN_ARROW) {
-        colour="black";
+        ypos = ypos - 2;
     }
 }
