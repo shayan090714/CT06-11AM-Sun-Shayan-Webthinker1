@@ -34,6 +34,8 @@ function setup(){
     
  }
  function keyPressed(){
+    i
+
     if (key === 's'){
         bgm.stop();
     }
