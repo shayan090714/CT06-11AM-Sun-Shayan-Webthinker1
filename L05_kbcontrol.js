@@ -41,7 +41,7 @@ function setup(){
 function draw(){
      background("grey");
     //  if (showCircle)
-        //  fill(colour);
+         fill(colour);
          circle(xpos,ypos,size);
 
      }
