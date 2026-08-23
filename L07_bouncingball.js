@@ -27,6 +27,6 @@ if (ballY > height){
     ballSpeedY = -1 * ballSpeedY
 } 
 if (ballY < 0){
-    ballSpeedY = -1 * ballSpeedX
+    ballSpeedY = -1 * ballSpeedY
 } 
 }
