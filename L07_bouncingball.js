@@ -1,6 +1,7 @@
 let pico;
 let xpos,ypos;
 let bgm,sfx
+let picoWidth
 function preload(){
     pico = loadImage("assets/pico-a.png");
     bgm = loadSound("assets/bossaNova.mp3");
