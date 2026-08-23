@@ -18,8 +18,8 @@ function setup(){
  function draw(){
     background("lightblue");
     image(pico,xpos,ypos,picoWidth,133);
-    
-    
+    picoWidth = 110;
+
     if(keyIsDown(RIGHT_ARROW)){
         xpos = xpos + 2;
     }
