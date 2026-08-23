@@ -6,12 +6,11 @@ let ballSpeedY = 2;
 
 function setup(){
 createCanvas(600,400)
-background('lightpink')
 noStroke();
 ballX = width/2;
 ballY = heigth/2;
 }
 
 function draw(){
-
+background()
 }
