@@ -19,7 +19,7 @@ function setup(){
     background("lightblue");
     image(pico,xpos,ypos,picoWidth,133);
     
-
+    
     if(keyIsDown(RIGHT_ARROW)){
         xpos = xpos + 2;
     }
