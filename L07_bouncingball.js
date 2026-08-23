@@ -21,7 +21,7 @@ function setup(){
     
 
     if(keyIsDown(RIGHT_ARROW)){
-        picoWidth = 110;
+        xpos = xpos
     }
     if(keyIsDown(LEFT_ARROW)){
         xpos = xpos - 2;
