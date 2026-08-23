@@ -19,7 +19,7 @@ ballX = ballX + ballSpeedX
 ballY = ballY + ballSpeedY
 if (ballX > width){
     ballSpeedX = -1 * ballSpeedX
-    
+    fill(random)
 } 
 if (ballX < 0){
     ballSpeedX = -1 * ballSpeedX
