@@ -17,4 +17,7 @@ fill(200);
 circle(ballX,ballY,ballSize)
 ballX = ballX + ballSpeedX
 ballY = ballY + ballSpeedY
+if (ballX > width){
+    
+} 
 }
