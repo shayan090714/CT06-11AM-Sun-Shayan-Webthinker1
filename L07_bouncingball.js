@@ -18,6 +18,6 @@ circle(ballX,ballY,ballSize)
 ballX = ballX + ballSpeedX
 ballY = ballY + ballSpeedY
 if (ballX > width){
-    ballSpeedX = -1
+    ballSpeedX = -1 * ballS
 } 
 }
