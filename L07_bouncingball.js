@@ -35,7 +35,7 @@ function setup(){
  }
  function keyPressed(){
     if(keycode===32){
-        picoWidth;
+        picoWidth = 55;
     }
 
     if (key === 's'){
