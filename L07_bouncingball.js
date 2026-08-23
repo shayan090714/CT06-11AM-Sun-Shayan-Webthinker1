@@ -23,7 +23,7 @@ if (ballX > width){
 if (ballX < 0){
     ballSpeedX = -1 * ballSpeedX
 } 
-if (ballX > width){
+if (ballY > heigt){
     ballSpeedX = -1 * ballSpeedX
 } 
 if (ballX < 0){
