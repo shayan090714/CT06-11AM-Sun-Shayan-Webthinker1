@@ -5,7 +5,7 @@ let ballSpeedX = 2;
 let ballSpeedY = 2;
 
 function setup(){
-createCanvas(300,400)
+createCanvas(600,400)
 noStroke();
 ballX = width/2;
 ballY = height/2;
