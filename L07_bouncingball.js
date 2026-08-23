@@ -16,5 +16,5 @@ background(0);
 fill(200);
 circle(ballX,ballY,ballSize)
 ballX = ballX + ballSpeedX
-
+ballY = ballX + ballSpeedX
 }
