@@ -32,7 +32,7 @@ function setup(){
     if(keyIsDown(DOWN_ARROW)){
         ypos = ypos + 2;
     }
-    if(keyIsDown(DOWN_ARROW)){
+    if(keyIsDown(SPACE)){
         ypos = ypos + 2;
     }
  }
