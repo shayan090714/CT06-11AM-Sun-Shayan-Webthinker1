@@ -8,3 +8,6 @@ function setup(){
 
 }
 
+function draw(){
+    
+}
