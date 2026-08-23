@@ -44,4 +44,8 @@ function setup(){
     if (key === 'c'){
         bgm.play();
     }
+xpos = constrain(xpos,0+12.5,width-12.5);
+    ypos = constrain(ypos,0+12.5,height-12.5);
+
+
  }
