@@ -20,7 +20,7 @@ ballY = ballY + ballSpeedY
 if (ballX > width){
     ballSpeedX = -1 * ballSpeedX
 } 
-if (ballX > width){
+if (ballX < width){
     ballSpeedX = -1 * ballSpeedX
 } 
 }
