@@ -7,6 +7,8 @@ let ballSpeedY = 2;
 function setup(){
 createCanvas(600,400)
 background('lightpink')
+ballX = width/2;
+
 }
 
 function draw(){
