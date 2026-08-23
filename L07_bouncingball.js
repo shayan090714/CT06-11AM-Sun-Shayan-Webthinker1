@@ -21,6 +21,7 @@ function setup(){
     
 
     if(keyIsDown(RIGHT_ARROW)){
+        pico
         xpos = xpos + 2
     }
     if(keyIsDown(LEFT_ARROW)){
