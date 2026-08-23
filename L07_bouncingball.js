@@ -8,7 +8,7 @@ function setup(){
 createCanvas(400,600)
 noStroke();
 ballX = width/2;
-ballY = heigth/2;
+ballY = height/2;
 }
 
 function draw(){
