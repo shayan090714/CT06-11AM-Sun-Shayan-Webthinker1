@@ -14,5 +14,5 @@ ballY = height/2;
 function draw(){
 background(0);
 fill(200);
-circle(ballX)
+circle(ballX,ballY,)
 }
