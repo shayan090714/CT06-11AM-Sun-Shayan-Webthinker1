@@ -12,5 +12,5 @@ ballY = heigth/2;
 }
 
 function draw(){
-background(200);
+background(0);
 }
