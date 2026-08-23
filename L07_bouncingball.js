@@ -32,7 +32,9 @@ function setup(){
     if(keyIsDown(DOWN_ARROW)){
         ypos = ypos + 2;
     }
-    
+    if(keyIsDown(DOWN_ARROW)){
+        ypos = ypos + 2;
+    }
  }
  function keyPressed(){
     if(keycode===32){
