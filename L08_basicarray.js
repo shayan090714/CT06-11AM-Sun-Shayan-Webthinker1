@@ -6,5 +6,5 @@ function draw(){
 background(220)
 textSize(64)
 
-text 
+text("Hello ")
 }
