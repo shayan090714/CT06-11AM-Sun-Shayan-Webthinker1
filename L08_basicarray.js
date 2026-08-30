@@ -16,6 +16,7 @@ function setup(){
 function draw(){
 background(0);
 textSize(18);
+fill(yellow)
 
 lineY = 0
 for(let count= 0;count< storyText.length;count++){
