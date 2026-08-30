@@ -21,7 +21,7 @@ textAlign(Center,Center)
 
 lineY = 0
 for(let count= 0;count< storyText.length;count++){
-text(storyText[count],100,ypos + lineY)
+text(storyText[count],width/2,ypos + lineY)
 lineY = lineY + 20;
 }
 ypos = ypos - 0.5;
