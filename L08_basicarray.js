@@ -17,6 +17,8 @@ function draw(){
 background(220);
 textSize(18);
 
+lineY = 0
+for(let count= 0;count< storyText.length;)
 text(storyText[count]),100,ypos + lineY
 lineY = lineY + 20;
 
