@@ -17,7 +17,8 @@ function draw(){
 background(220);
 textSize(18);
 
-text(storyText[count]),
+text(storyText[count]),100,ypos + lineY
+
 
 ypos = ypos - 0.5;
 }
