@@ -1,7 +1,7 @@
 let ypos = 0;
 let lineY = 0;
 let storyText = [];
-let center 
+
 
 function setup(){
     createCanvas(600,600);
@@ -18,7 +18,7 @@ function draw(){
 background(0);
 textSize(18);
 fill("yellow");
-textAlign(Center,Center)
+
 
 lineY = 0
 for(let count= 0;count< storyText.length;count++){
