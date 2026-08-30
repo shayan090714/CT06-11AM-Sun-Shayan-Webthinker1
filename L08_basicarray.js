@@ -14,7 +14,7 @@ function setup(){
     print(storyText)
 }
 function draw(){
-background(220);
+background(0);
 textSize(18);
 
 lineY = 0
