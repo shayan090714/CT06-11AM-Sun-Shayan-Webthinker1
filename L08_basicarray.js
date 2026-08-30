@@ -7,5 +7,5 @@ background(220)
 textSize(64)
 
 text("Hello everybody",200,height/2)
-text("Hello everybody",200,height/2)
+text("Second line",200,height/2)
 }
