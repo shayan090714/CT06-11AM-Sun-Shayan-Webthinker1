@@ -11,5 +11,5 @@ textSize(18);
 text("Hello everybody",200,ypos);
 text("Second line",200,ypos + 18);
 
-ypos -= 0.5;
+ypos = ypos 0.5;
 }
