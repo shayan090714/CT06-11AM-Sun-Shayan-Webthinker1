@@ -18,7 +18,7 @@ background(220);
 textSize(18);
 
 text(storyText[count]),100,ypos + lineY
-
+lineY = lineY
 
 ypos = ypos - 0.5;
 }
