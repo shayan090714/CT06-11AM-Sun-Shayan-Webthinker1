@@ -16,7 +16,7 @@ function setup(){
 function draw(){
 background(0);
 textSize(18);
-fill('yellow');
+fill("yellow");
 textAlign(Center,Center)
 
 lineY = 0
