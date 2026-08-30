@@ -25,7 +25,6 @@ text(storyText[count],width/2,ypos + lineY)
 lineY = lineY + 20;
 }
 ypos = ypos - 0.5;
-
 if (ypos<0){
     ypos = height;
 }
