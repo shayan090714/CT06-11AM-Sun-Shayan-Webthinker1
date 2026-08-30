@@ -17,7 +17,7 @@ function draw(){
 background(220);
 textSize(18);
 
-t
+tex
 
 ypos = ypos - 0.5;
 }
