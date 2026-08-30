@@ -10,4 +10,6 @@ textSize(64)
 
 text("Hello everybody",200,ypos)
 text("Second line",200,ypos + 18)
+
+y
 }
