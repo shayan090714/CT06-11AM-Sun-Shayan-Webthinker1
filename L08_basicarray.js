@@ -18,7 +18,7 @@ background(220);
 textSize(18);
 
 lineY = 0
-for(let count= 0;count< storyText.length;)
+for(let count= 0;count< storyText.length;count++)
 text(storyText[count]),100,ypos + lineY
 lineY = lineY + 20;
 
