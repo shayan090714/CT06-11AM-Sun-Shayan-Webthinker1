@@ -1,4 +1,6 @@
 let ypos = 0;
+let lineY = 0;
+l
 
 function setup(){
     createCanvas(600,600);
