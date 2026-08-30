@@ -1,6 +1,6 @@
 let ypos = 0;
 let lineY = 0;
-let storyText = {};
+let storyText = [];
 
 function setup(){
     createCanvas(600,600);
