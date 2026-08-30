@@ -10,6 +10,8 @@ function setup(){
     storyText[1] = "Dinosaurs used to rule the earth"
     storyText[2] = "Then a rock from space killed them"
     storyText[3] = "The End"
+
+    print(storyText)
 }
 function draw(){
 background(220);
