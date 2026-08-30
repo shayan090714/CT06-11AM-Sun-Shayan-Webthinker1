@@ -2,6 +2,7 @@ let ypos = 0;
 
 function setup(){
     createCanvas(200,400);
+    ypos = heig
 }
 function draw(){
 background(220);
