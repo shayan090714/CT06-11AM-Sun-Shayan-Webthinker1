@@ -1,10 +1,10 @@
 let ypos = 0;
 
 function setup(){
-    createCanvas(200,400)
+    createCanvas(200,400);
 }
 function draw(){
-background(220)
+background(220);
 textSize(18);
 
 text("Hello everybody",200,ypos);
