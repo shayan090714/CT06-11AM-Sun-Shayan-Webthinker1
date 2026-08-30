@@ -5,6 +5,11 @@ let storyText = [];
 function setup(){
     createCanvas(600,600);
     ypos = height
+    
+    storytext[0] = "Long long long time ago..."
+    storyText[1] = "Dinosaurs used to rule the earth"
+    storyText[2] = "Then a rock from space killed them"
+    storyText[3] = "The End"
 }
 function draw(){
 background(220);
