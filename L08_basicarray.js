@@ -1,3 +1,5 @@
+let ypos 
+
 function setup(){
     createCanvas(600,400)
     
