@@ -8,11 +8,11 @@ function draw(){
     // textSize(20);
     // text("I am Shayan",50,50);
     
-    fill(255,255,0)
-    textSize(24)
-    textAlign(CENTER)
+    fill(255,255,0);
+    textSize(24);
+    textAlign(CENTER);
     for (let i = 0;i<list.length;i++){
-        text((i+1)+"."+list[i],width/2,yPos+i*lineGap)
+        text((i+1)+"."+list[i],width/2,yPos+i*lineGap);
     }
 
 
