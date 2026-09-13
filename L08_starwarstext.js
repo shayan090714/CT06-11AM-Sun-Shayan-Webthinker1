@@ -1,4 +1,4 @@
-let arrname=["Pizza","Burger","Sushi","Tacos",""]
+let arrname=["Pizza","Burger","Sushi","Tacos","Pasta"]
 function setup(){
     createCanvas(600,400);
 }
