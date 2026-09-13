@@ -8,5 +8,5 @@ function draw(){
     // text("I am Shayan",50,50);
     
     textSize(20)
-    
+    textAlign(screenLeft,)
 }
