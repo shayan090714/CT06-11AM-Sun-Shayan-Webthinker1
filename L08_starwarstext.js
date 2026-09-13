@@ -4,7 +4,7 @@ function setup(){
 }
 let yPos = 400;
 function draw(){
-    background(255);
+    background(0);
     // textSize(20);
     // text("I am Shayan",50,50);
     
