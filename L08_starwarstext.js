@@ -14,7 +14,7 @@ function draw(){
     for (let i = 0;i<list.length;i++){
         text((i+1)+"."+list[i],width/2,yPos+i*lineGap);
     }
-
-
     yPos -= 0.6;
+
+    
 }
