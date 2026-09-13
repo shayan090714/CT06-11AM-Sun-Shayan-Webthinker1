@@ -12,7 +12,7 @@ function draw(){
     textSize(24)
     textAlign(CENTER)
     for (let i = 0;i<list.length;i++){
-        text((i+1)+"."+list[i],width/2,yPos)
+        text((i+1)+"."+list[i],width/2,yPos+i*lineGap)
     }
 
 
