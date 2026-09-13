@@ -12,7 +12,7 @@ let yPos = 400;
 let lineGap = 60;
 let sound
 function preload(){
-    sound = loadSound('assets/star_wars')
+    sound = loadSound('assets/star_wars_theme_8_bit.mp3')
 }
 function draw(){
     background(0);
