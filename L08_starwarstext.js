@@ -15,6 +15,8 @@ function draw(){
         text((i+1)+"."+list[i],width/2,yPos+i*lineGap);
     }
     yPos -= 0.6;
-
+if(yPos< -list.length*lineGap){
     
+}
+
 }
