@@ -12,7 +12,7 @@ function draw(){
     textSize(24)
     textAlign(CENTER)
     for (let i = 0;i<list.length;i++){
-        text((i+1)+".")
+        text((i+1)+"."+list[i])
     }
 
 
