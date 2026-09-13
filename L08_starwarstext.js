@@ -1,1 +1,3 @@
-let storyText
+let storyText = [
+    
+]
