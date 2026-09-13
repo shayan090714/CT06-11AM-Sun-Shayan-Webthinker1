@@ -10,7 +10,8 @@ function draw(){
     
     fill(255,255,0)
     textSize(24)
-    textAlign(CENTER) 
+    textAlign(CENTER)
+    for (let i = 0;i<FileList;)
 
 
     yPos -= 0.6;
