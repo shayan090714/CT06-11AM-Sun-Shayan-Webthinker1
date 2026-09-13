@@ -21,7 +21,7 @@ function draw(){
         text((i+1)+"."+storyText[i],width/2,yPos+i*lineGap);
     }
     yPos -= 0.6;
-if(yPos< -list.length*lineGap){
+if(yPos< -storyText.length*lineGap){
     yPos = height;
 }
 
