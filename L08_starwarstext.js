@@ -16,6 +16,7 @@ function preload(){
 }
 function draw(){
     background(0);
+    sound.loop()
     
     
     fill(255,255,0);
