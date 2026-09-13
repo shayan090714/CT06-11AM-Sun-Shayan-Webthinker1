@@ -12,7 +12,7 @@ function draw(){
     textAlign(LEFT);
     text("My Favourite Foods:")
     for (let i=0;i<list.length;i++){
-        text((i+1)+"."+list[i],50,i*30)
+        text((i+1)+"."+list[i],50,i*30);
     }
     yPos -= 0.6;
 }
