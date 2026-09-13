@@ -6,6 +6,6 @@ function setup(){
 }
 function draw(){
     background(255);
-    textSize(67);
+    textSize(20);
     text("I am Shayan",50,50);
 }
