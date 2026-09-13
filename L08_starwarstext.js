@@ -3,7 +3,7 @@ function setup(){
     createCanvas(600,400);
 }
 let yPos = 400;
-let lineGap =
+let lineGap = 60;
 function draw(){
     background(0);
     // textSize(20);
