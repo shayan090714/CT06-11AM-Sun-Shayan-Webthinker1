@@ -11,6 +11,9 @@ function setup(){
 let yPos = 400;
 let lineGap = 60;
 let sound
+function preload(){
+    
+}
 function draw(){
     background(0);
     
