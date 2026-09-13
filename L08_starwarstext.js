@@ -2,7 +2,7 @@ let arrname=["Pizza","Burger","Sushi","Tacos","Pasta"]
 function setup(){
     createCanvas(600,400);
 }
-let yPos =400
+let yPos = 400;
 function draw(){
     background(255);
     // textSize(20);
