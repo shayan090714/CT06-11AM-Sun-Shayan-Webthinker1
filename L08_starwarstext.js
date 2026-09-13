@@ -17,7 +17,7 @@ function draw(){
     fill(255,255,0);
     textSize(24);
     textAlign(CENTER);
-    for (let i = 0;i<list.length;i++){
+    for (let i = 0;i<storyText.length;i++){
         text((i+1)+"."+list[i],width/2,yPos+i*lineGap);
     }
     yPos -= 0.6;
