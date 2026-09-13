@@ -10,6 +10,7 @@ function setup(){
 }
 let yPos = 400;
 let lineGap = 60;
+let sound
 function draw(){
     background(0);
     
