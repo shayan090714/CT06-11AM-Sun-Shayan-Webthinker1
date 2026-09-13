@@ -9,5 +9,5 @@ function draw(){
     
     textSize(20)
     textAlign(LEFT);
-    text("")
+    text("MY Fav")
 }
