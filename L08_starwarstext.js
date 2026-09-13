@@ -1,4 +1,4 @@
-let arrname
+let arrname=[]
 function setup(){
     createCanvas(600,400);
 }
