@@ -15,7 +15,7 @@ function draw(){
     
     
     fill(255,255,0);
-    textSize(55);
+    textSize(45);
     textAlign(CENTER);
     for (let i = 0;i<storyText.length;i++){
         text((i+1)+"."+storyText[i],width/2,yPos+i*lineGap);
