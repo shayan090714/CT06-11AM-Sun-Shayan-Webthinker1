@@ -12,8 +12,7 @@ let yPos = 400;
 let lineGap = 60;
 function draw(){
     background(0);
-    // textSize(20);
-    // text("I am Shayan",50,50);
+    
     
     fill(255,255,0);
     textSize(24);
