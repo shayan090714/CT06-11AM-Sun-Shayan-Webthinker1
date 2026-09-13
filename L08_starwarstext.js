@@ -16,7 +16,7 @@ function draw(){
     }
     yPos -= 0.6;
 if(yPos< -list.length*lineGap){
-    yPos = innerHeight;
+    yPos = height;
 }
 
 }
