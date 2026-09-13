@@ -6,5 +6,5 @@ function setup(){
 }
 function draw(){
     background(220);
-    Text("I am Shayan")
+    text("I am Shayan",50,50)
 }
