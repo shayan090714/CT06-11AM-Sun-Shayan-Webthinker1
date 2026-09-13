@@ -14,5 +14,5 @@ function draw(){
     for (let i=0;i<list.length;i++)(
         text((i+1)+"."+list[i],50,i*30)
     )
-    yPos -= 0.
+    yPos -= 0.6;
 }
