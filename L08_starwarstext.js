@@ -8,7 +8,7 @@ function draw(){
     // textSize(20);
     // text("I am Shayan",50,50);
     
-    fill(255) 
+    fill(255,255,0) 
 
 
     yPos -= 0.6;
