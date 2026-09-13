@@ -7,7 +7,7 @@ function draw(){
     // textSize(20);
     // text("I am Shayan",50,50);
     
-    textSize(20)
+    textSize(20);
     textAlign(LEFT);
     text("My Favourite Foods:")
     for (let i=0;i<FileList.length;i++)(
