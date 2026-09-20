@@ -25,6 +25,6 @@ function mousePressed(){
 }
 function updateCountdown(){
     if (countdown === 0){
-        
+        clearInterval()
     }
 }
