@@ -29,7 +29,7 @@ function mousePressed(){
 function updateCountdown(){
     if (countdown === 0){
         clearInterval(objectId);
-        bgMusic.play
+        bgMusic.play();
     }
     else{
         countdown = countdown -1;
