@@ -1,4 +1,5 @@
 let countdown = 5
+let objectId
 function setup(){
     createCanvas(400, 400);
     textAlign(CENTER,CENTER)
@@ -17,5 +18,5 @@ function draw(){
     text(countdown,width/2,height/2+75);
     textSize(16);
     text("Click here to start countdown",width/2,height/2+105);
-    
+
 }
