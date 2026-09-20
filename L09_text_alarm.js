@@ -19,4 +19,6 @@ function draw(){
     textSize(16);
     text("Click here to start countdown",width/2,height/2+105);
 }
-mousePressed
+function mousePressed(){
+    
+}
