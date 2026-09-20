@@ -4,7 +4,7 @@ let bgColour = "grey";
 let bgMusic;
 
 function preload(){
-    bgMusic = 
+    bgMusic = loadSound()
 }
 function setup(){
     createCanvas(400, 400);
