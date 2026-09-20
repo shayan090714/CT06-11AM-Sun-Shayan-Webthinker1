@@ -20,5 +20,5 @@ function draw(){
     text("Click here to start countdown",width/2,height/2+105);
 }
 function mousePressed(){
-    
+    console.log()
 }
