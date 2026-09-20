@@ -12,5 +12,5 @@ function draw(){
     textSize(72);
     text(nf(h,2)+":00:"+":"+sec,width/2,height/2);
     text(nf(m,2)+":00:"+":"+sec,width/2,height/2);
-    
+    text(nf(sec,2)+":00:"+":"+sec,width/2,height/2);
 }
