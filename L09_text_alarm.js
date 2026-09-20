@@ -10,6 +10,7 @@ function draw(){
     let sec = second();
     fill(0);
     textSize(72);
+    text(nf)
     
     
 }
