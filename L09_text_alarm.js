@@ -9,6 +9,7 @@ function draw(){
     let m = minute();
     let sec = second();
     fill(0);
+    textSize(72);
     
     
 }
