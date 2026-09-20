@@ -21,5 +21,5 @@ function draw(){
 }
 function mousePressed(){
     console.log("I got mouse clicked!")
-    objectId = setInterval(updateCountdown)
+    objectId = setInterval(updateCountdown,1000);
 }
