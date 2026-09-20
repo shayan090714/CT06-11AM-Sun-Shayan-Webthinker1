@@ -1,6 +1,6 @@
 let countdown = 5
 let objectId
-let bgColour = ""
+let bgColour = "gray"
 function setup(){
     createCanvas(400, 400);
     textAlign(CENTER,CENTER)
