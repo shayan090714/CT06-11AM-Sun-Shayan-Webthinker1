@@ -1,14 +1,14 @@
-let countdown = 5
-let objectId
-let bgColour = "gray"
+let countdown = 5;
+let objectId;
+let bgColour = "gray";
 function setup(){
     createCanvas(400, 400);
-    background(bgColour)
-    textAlign(CENTER,CENTER)
+    background(bgColour);
+    textAlign(CENTER,CENTER);
 }
 
 function draw(){
-    background(bgColour)
+    background(bgColour);
     let h = hour();
     let m = minute();
     let sec = second();
