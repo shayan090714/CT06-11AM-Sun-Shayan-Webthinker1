@@ -10,7 +10,7 @@ function draw(){
     let sec = second();
     fill(0);
     textSize(72);
-    text(nf(h,2)+":00:"+":00")
+    text(nf(h,2)+":00:"+":00:")
     
     
 }
