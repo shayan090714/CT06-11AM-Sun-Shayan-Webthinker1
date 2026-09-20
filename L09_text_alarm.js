@@ -8,7 +8,7 @@ function draw(){
     let h = hour();
     let m = minute();
     let sec = second();
-    fill(0)
+    fill(0);
     
     
 }
