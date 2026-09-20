@@ -2,6 +2,10 @@ let countdown = 5;
 let objectId;
 let bgColour = "grey";
 let bgMusic;
+
+function preload(){
+    
+}
 function setup(){
     createCanvas(400, 400);
     background(bgColour);
