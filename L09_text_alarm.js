@@ -28,6 +28,6 @@ function updateCountdown(){
         clearInterval(objectId);
     }
     else{
-        
+        countdown = countdown -1
     }
 }
