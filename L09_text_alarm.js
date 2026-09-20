@@ -12,6 +12,7 @@ function draw(){
     fill(0);
     textSize(72);
     text(nf(h,2)+":"+ nf(m,2)+":"+sec,width/2,height/2) ;
-    fill(red)
-    textSize(32)
+    fill(red);
+    textSize(32);
+    
 }
