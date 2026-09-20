@@ -10,4 +10,5 @@ function draw(){
     let sec = second();
     
     
+    
 }
