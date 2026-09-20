@@ -6,7 +6,8 @@ function setup(){
 function draw(){
     background(220)
     let h = hour();
-    let sec = second()
+    let m =m
+    let sec = second();
     
     
 }
