@@ -16,5 +16,5 @@ function draw(){
     textSize(32);
     text(countdown,width/2,height/2+75);
     textSize(16);
-    
+    text()
 }
