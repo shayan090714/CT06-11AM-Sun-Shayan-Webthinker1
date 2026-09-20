@@ -3,6 +3,7 @@ let objectId
 let bgColour = "gray"
 function setup(){
     createCanvas(400, 400);
+    background(bgColour)
     textAlign(CENTER,CENTER)
 }
 
