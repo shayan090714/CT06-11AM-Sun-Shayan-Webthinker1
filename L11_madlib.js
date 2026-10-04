@@ -5,6 +5,7 @@ let adverbInput
 let placeInput
 let button
 let storytext = ""
+let storyTemplates
 
 function setup(){
     createCanvas(600,700)
