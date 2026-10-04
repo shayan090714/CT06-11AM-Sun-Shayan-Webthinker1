@@ -1,6 +1,6 @@
 let nounInput
 let verbInput
-
+let adjectiveInput
 let button
 
 
