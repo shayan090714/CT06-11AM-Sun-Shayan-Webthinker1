@@ -15,7 +15,7 @@ function setup(){
 
     button = createButton("Generate")
     button.position(width/2,200)
-    button.mousePresee
+    button.mousePressed()
 
 }
 function draw(){
