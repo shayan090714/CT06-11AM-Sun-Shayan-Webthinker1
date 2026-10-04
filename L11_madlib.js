@@ -16,7 +16,7 @@ function setup(){
     ]
 
     template = random(storyTemplates)
-    storyText = 
+    storyText = template.replace("")
 
 
 
