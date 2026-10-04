@@ -15,6 +15,8 @@ function setup(){
         "Long long time ago, a {adjective} {noun} {verb} {adverb} on the {place}.",
     ]
 
+    template 
+
 
 
     nounInput = createInput
