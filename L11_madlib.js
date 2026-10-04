@@ -1,11 +1,11 @@
-let nounInput
-let verbInput
-let adjectiveInput
-let adverbInput
-let placeInput
-let button
-let storytext = ""
-let storyTemplates
+let nounInput;
+let verbInput;
+let adjectiveInput;
+let adverbInput;
+let placeInput;
+let button;
+let storytext = "";
+let storyTemplates;
 
 function setup(){
     createCanvas(600,700)
