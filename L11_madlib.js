@@ -8,8 +8,8 @@ function setup(){
 
     textInput = createInput
     textInput.position(width/2,100)
-    button = createInput
-    textInput.position(width/2,100)
+    button = 
+    button.position(width/2,100)
 }
 function draw(){
 
