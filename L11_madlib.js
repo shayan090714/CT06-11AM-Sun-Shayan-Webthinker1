@@ -11,7 +11,7 @@ function setup(){
     textInput.position(width/2,100)
 
     button = createButton("submit")
-    button.position(width/2,100)
+    button.position(width/2,200)
 
 }
 function draw(){
