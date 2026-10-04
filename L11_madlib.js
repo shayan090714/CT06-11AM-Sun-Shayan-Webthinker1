@@ -11,7 +11,8 @@ function setup(){
     storytemplates = [
         "The {adjective} {noun} decided to {verb} {adverb} at the {place}.",
         "One day, a {adjective} {noun} wanted to {verb} {adverb} in {place}.",
-        "Did you hear about the {adjective} {noun} that tried to {verb} {adverb} near {place}."
+        "Did you hear about the {adjective} {noun} that tried to {verb} {adverb} near {place}.",
+        "Long long time ago, a {adjective} {noun} {verb} {adverb} on the {place}.",
     ]
 
 
