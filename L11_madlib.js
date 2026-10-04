@@ -4,7 +4,7 @@ let adjectiveInput
 let adverbInput
 let placeInput
 let button
-
+let storytext = ""
 
 function setup(){
     createCanvas(600,700)
