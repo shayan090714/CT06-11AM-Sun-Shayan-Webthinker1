@@ -7,7 +7,7 @@ function setup(){
     createCanvas(600,400)
 
     nounInput = createInput
-    NounInput.position(width/2,100)
+    nounInput.position(width/2,100)
     
     secondInput = createInput()
     secondInput.position(width/2,140)
