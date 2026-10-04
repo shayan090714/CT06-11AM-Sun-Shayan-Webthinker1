@@ -22,7 +22,7 @@ function setup(){
     adverbInput.position(width/2,220)
 
     placeInput = createInput()
-    
+    placeInput = position(width/2)
 
     button = createButton("Generate")
     button.position(width/2,200)
