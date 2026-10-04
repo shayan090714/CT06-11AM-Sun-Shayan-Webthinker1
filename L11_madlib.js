@@ -51,7 +51,7 @@ text("Enter a place",width/2-10,260)
 textAlign(CENTER,CENTER)
 textSize(14)
 fill("red")
-text(storyText)
+text(storyText,width/2eight/2)
 }
 function updateStory(){
 
