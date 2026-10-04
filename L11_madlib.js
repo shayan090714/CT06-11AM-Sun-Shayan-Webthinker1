@@ -51,7 +51,7 @@ text(storyText,width/2,height/2)
 }
 function updateStory(){
 template = random(storyTemplates)
-    storyText = storyText.replace("{noun}",nounInput.value())
+    storyText = templat.replace("{noun}",nounInput.value())
     storyText = st.replace("{verb}",verbInput.value())
     storyText = template.replace("{adjective}",adjectiveInput.value())
     storyText = template.replace("{adverb}",adverbInput.value())
