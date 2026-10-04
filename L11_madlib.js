@@ -15,9 +15,10 @@ function setup(){
 
     button = createButton("Generate")
     button.position(width/2,200)
-    button.mousePressed()
+    button.mousePressed(updateStory)
 
 }
 function draw(){
+    
 
 }
