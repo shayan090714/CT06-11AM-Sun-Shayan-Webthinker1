@@ -50,7 +50,7 @@ fill("red")
 text(storyText,width/2,height/2)
 }
 function updateStory(){
-template = random(storyTemplates)
+Sto = random(storyTemplates)
     storyText = storyText.replace("{noun}",nounInput.value())
     storyText = template.replace("{verb}",verbInput.value())
     storyText = template.replace("{adjective}",adjectiveInput.value())
