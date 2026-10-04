@@ -18,7 +18,8 @@ function setup(){
     adjectiveInput = createInput()
     adjectiveInput.position(width/2,180)
 
-    adverbInput = createInput
+    adverbInput = createInput()
+    adver
 
     button = createButton("Generate")
     button.position(width/2,200)
