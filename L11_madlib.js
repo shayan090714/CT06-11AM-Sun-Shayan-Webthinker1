@@ -9,7 +9,7 @@ let button
 function setup(){
     createCanvas(600,700)
     storytemplates = [
-        "The {adj} {noun} decided to {verb} "
+        "The {adjective} {noun} decided to {verb} {"
     ]
 
 
