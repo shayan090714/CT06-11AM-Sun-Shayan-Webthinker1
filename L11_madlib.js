@@ -15,7 +15,7 @@ function setup(){
     verbInput = createInput()
     verbInput.position(width/2,140)
 
-    adjectiveInpu
+    adjectiveInput = createInput()
 
     button = createButton("Generate")
     button.position(width/2,200)
