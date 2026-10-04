@@ -32,7 +32,7 @@ function draw(){
 background(220)
 textSize(18)
 textAlign(RIGHT,CENTER)
-text("")
+text("Enter a noun")
 
 
 }
