@@ -16,7 +16,7 @@ function setup(){
     ]
 
     template = random(storyTemplates)
-    storyText = template.replace("{noun],nounInput.value")
+    storyText = template.replace("{noun],nounInput.value()")
 
 
 
