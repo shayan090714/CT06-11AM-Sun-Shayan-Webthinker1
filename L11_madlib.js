@@ -33,6 +33,6 @@ background(220)
 textSize(18)
 textAlign(RIGHT,CENTER)
 text("Enter a noun",width/2-10,110)
-
+text("Enter a verb",width/2-10,110)
 
 }
