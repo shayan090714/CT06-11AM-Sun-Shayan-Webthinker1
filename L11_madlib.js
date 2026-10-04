@@ -10,7 +10,7 @@ function setup(){
     nounInput.position(width/2,100)
     
     verbInput = createInput()
-    secondInput.position(width/2,140)
+    verbInput.position(width/2,140)
 
     button = createButton("Generate")
     button.position(width/2,200)
