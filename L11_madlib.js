@@ -8,6 +8,7 @@ let button
 
 function setup(){
     createCanvas(600,700)
+    st
 
 
 
