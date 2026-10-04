@@ -12,7 +12,8 @@ function setup(){
     
     secondInput = createInput()
     secondInput.position(width/2,140)
-    button = createButton("submit")
+    
+    button = createButton("generate")
     button.position(width/2,200)
 
 }
