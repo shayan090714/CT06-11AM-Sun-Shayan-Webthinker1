@@ -15,7 +15,7 @@ function setup(){
         "Did you hear about the {adjective} {noun} that tried to {verb} {adverb} near {place}.",
         "Long long time ago, a {adjective} {noun} {verb} {adverb} on the {place}.",
     ]
-    nounInput = createInput
+    nounInput = createInput()
     nounInput.position(width/2,100)
     
     verbInput = createInput()
