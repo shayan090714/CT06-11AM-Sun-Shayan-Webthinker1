@@ -17,8 +17,6 @@ function setup(){
     button.mousePressed(updateStory)
 }
 function draw(){
-
-
 background(220)
 
 
