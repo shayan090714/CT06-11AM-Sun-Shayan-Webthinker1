@@ -1,4 +1,4 @@
-let textInput
+let NounInput
 let secondInput
 let button
 
