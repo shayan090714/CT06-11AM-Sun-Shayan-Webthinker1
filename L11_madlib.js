@@ -8,7 +8,7 @@ function setup(){
 
     textInput = createInput
     textInput.position(width/2,100)
-    textInput = createInput
+    button = createInput
     textInput.position(width/2,100)
 }
 function draw(){
