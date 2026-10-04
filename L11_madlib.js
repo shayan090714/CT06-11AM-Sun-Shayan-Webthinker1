@@ -16,6 +16,7 @@ function setup(){
     ]
 
     template = random(storyTemplates)
+    storyText = 
 
 
 
