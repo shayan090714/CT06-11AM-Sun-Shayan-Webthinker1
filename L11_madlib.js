@@ -7,7 +7,9 @@ let button
 
 
 function setup(){
-    createCanvas(600,600)
+    createCanvas(600,700)
+
+
 
     nounInput = createInput
     nounInput.position(width/2,100)
@@ -39,5 +41,5 @@ text("Enter a adverb",width/2-10,220)
 text("Enter a place",width/2-10,260)
 }
 function updateStory(){
-    
+
 }
