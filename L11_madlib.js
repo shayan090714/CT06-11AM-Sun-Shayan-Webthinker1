@@ -49,7 +49,9 @@ text("Enter a adverb",width/2-10,220)
 text("Enter a place",width/2-10,260)
 
 textAlign(CENTER,CENTER)
-textSize(14)("red")
+textSize(14)
+fill("red")
+
 }
 function updateStory(){
 
