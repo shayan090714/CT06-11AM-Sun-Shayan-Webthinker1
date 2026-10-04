@@ -1,7 +1,7 @@
 function setup(){
     createCanvas(400,600)
-    background(gold)
+    background(blue)
 }
 function draw(){
-    
+
 }
