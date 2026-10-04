@@ -4,7 +4,7 @@ let button
 
 
 function setup(){
-    createCanvas(600,400)
+    createCanvas(600,600)
 
     nounInput = createInput
     nounInput.position(width/2,100)
