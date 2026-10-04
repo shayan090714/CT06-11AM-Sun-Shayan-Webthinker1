@@ -55,5 +55,5 @@ template = random(storyTemplates)
     storyText = template.replace("{verb}",verbInput.value())
     storyText = template.replace("{adjective}",adjectiveInput.value())
     storyText = template.replace("{adverb}",adverbInput.value())
-    storyText = template.replace("{place]",placeInput.value())
+    storyText = template.replace("{place}",placeInput.value())
 }
