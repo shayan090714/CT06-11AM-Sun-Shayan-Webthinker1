@@ -7,7 +7,7 @@ function setup(){
     background(220)
 
     textInput = createInput
-    textInput.position()
+    textInput.position(width)
 }
 function draw(){
 
