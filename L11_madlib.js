@@ -1,4 +1,4 @@
-let NounInput
+let nounInput
 let secondInput
 let button
 
@@ -6,7 +6,7 @@ let button
 function setup(){
     createCanvas(600,400)
 
-    NounInput = createInput
+    nounInput = createInput
     NounInput.position(width/2,100)
     
     secondInput = createInput()
