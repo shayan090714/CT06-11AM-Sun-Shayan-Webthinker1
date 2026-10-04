@@ -4,7 +4,7 @@ let button
 
 
 function setup(){
-    
+    createCanvas(600,400)
 
     textInput = createInput
     textInput.position(width/2,100)
@@ -18,7 +18,7 @@ function setup(){
 }
 function draw(){
 
-createCanvas(600,400)
+
 background(220)
 
 
