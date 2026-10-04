@@ -10,8 +10,8 @@ function setup(){
     textInput = createInput
     textInput.position(width/2,100)
     
-    secondInput = createInput
-    textInput.position(width/2,100)
+    secondInput = createInput()
+    secondInput.position(width/2,100)
     button = createButton("submit")
     button.position(width/2,200)
 
