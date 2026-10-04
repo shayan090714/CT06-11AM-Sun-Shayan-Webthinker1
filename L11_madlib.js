@@ -15,6 +15,8 @@ function setup(){
     verbInput = createInput()
     verbInput.position(width/2,140)
 
+    adjectiveInpu
+
     button = createButton("Generate")
     button.position(width/2,200)
     button.mousePressed(updateStory)
