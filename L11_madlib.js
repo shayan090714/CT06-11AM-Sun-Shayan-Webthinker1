@@ -1,5 +1,5 @@
 let nounInput
-let secondInput
+let verbInput
 let button
 
 
@@ -9,7 +9,7 @@ function setup(){
     nounInput = createInput
     nounInput.position(width/2,100)
     
-    secondInput = createInput()
+    verbInput = createInput()
     secondInput.position(width/2,140)
 
     button = createButton("Generate")
