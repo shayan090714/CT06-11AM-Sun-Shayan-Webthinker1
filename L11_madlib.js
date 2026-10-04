@@ -16,8 +16,8 @@ function setup(){
     button.position(width/2,200)
     button.mousePressed(updateStory)
 
-}
 function draw(){
+}
 createCanvas(600,400)
 background(220)
 
