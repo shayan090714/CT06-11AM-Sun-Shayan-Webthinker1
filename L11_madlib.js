@@ -20,6 +20,7 @@ function setup(){
     storyText = template.replace("{noun]",nounInput.value())
     storyText = template.replace("{noun]",nounInput.value())
     storyText = template.replace("{noun]",nounInput.value())
+      
     nounInput = createInput
     nounInput.position(width/2,100)
     
