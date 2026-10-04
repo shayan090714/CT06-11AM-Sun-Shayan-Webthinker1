@@ -6,8 +6,8 @@ let button
 function setup(){
     createCanvas(600,400)
 
-    textInput = createInput
-    textInput.position(width/2,100)
+    NounInput = createInput
+    NounInput.position(width/2,100)
     
     secondInput = createInput()
     secondInput.position(width/2,140)
