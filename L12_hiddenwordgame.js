@@ -28,7 +28,10 @@ function checkAnswer(){
     answer = answer.toUppercae()
 
     if (answer===hidden){
-        print("You won!")
+        message = "You won the game!"
+    }
+    else{
+        
     }
 }
 function draw(){
