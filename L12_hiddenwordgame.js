@@ -5,7 +5,7 @@ let guessInput
 let submitButton
 let message = ""
 let hidden
-
+let hints
 
 function setup(){
     createCanvas(800,650)
