@@ -30,6 +30,6 @@ function draw(){
     text("Attempts: "+ attempts,width/2,135)
     text("Hint:" + hints,width/2,185)
     fill("red")
-    
+    textSize(28)
 }
     
