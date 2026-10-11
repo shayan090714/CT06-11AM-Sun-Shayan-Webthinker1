@@ -15,6 +15,6 @@ function setup(){
     submitButton.style("font-style","20px")
 }
 function draw(){
-    
+    background(220)
 }
     
