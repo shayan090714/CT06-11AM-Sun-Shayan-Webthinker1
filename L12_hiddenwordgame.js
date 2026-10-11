@@ -1,5 +1,5 @@
 hiddenwords = [
-        "Green","Messy","Arrow","Apple","Table","Sharp","Clean","Close","Small","Skull"
+        "GREEN","Messy","Arrow","Apple","Table","Sharp","Clean","Close","Small","Skull"
     ]
 let guessInput
 let submitButton
