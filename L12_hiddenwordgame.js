@@ -1,7 +1,8 @@
 hiddenwords = [
         "Green","Messy","Arrow","Apple","Table","Sharp","Clean","Close","Small","Skull"
     ]
-let 
+let guessInput
+let sun
 
 
 function setup(){
