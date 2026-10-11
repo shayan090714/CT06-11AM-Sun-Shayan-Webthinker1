@@ -7,5 +7,5 @@ let submitButton
 function setup(){
     createCanvas(800,650)
     guessInput = createInput()
-    guessInput.position
+    guessInput.position(width/2-220)
 }
