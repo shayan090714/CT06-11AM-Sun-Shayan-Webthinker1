@@ -25,6 +25,6 @@ function draw(){
     background(220)
     fill("black")
     textSize(44)
-    
+    textAlign(C)
 }
     
