@@ -18,7 +18,7 @@ function setup(){
     submitButton.style("font-style","20px")
     submitButton.mousePressed(checkAnswer)
 
-    hidden = random(WORDS)
+    hidden = random(hiddenwords)
     console.log(hidden)
     hints = hidden[0] +" _ _ _ _"
 }
