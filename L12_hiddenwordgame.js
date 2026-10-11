@@ -25,7 +25,7 @@ function setup(){
 
 function checkAnswer(){
     let answer = guessInput.value()
-    answer = answer.toUppercae()
+    answer = answer.toUpperCase()
 
     if (answer===hidden){
         message = "You won the game!"
