@@ -28,6 +28,6 @@ function draw(){
     textAlign(CENTER,CENTER)
     text("Guess the hidden word",width/2,75)
     text("Attempts: "+ attempts,width/2,135)
-    text("Hint:" + hints,width/2)
+    text("Hint:" + hints,width/2,185)
 }
     
