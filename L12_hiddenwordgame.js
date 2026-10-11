@@ -16,7 +16,7 @@ function setup(){
     submitButton = createButton()
     submitButton.position(width/2+75,heigth/2)
     submitButton.style("font-style","20px")
-    submitButto
+    submitButton.mousePressed
 
     hidden = random(WORDS)
     console.log(hidden)
