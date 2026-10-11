@@ -14,7 +14,7 @@ function setup(){
     guessInput.style("font-size","20px")
     
     submitButton = createButton()
-    submitButton.position(width/2+75,heigth/2)
+    submitButton.position(width/2+75,height/2)
     submitButton.style("font-style","20px")
     submitButton.mousePressed(checkAnswer)
 
