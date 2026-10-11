@@ -24,7 +24,7 @@ function setup(){
 }
 
 function checkAnswer(){
-    
+    let answer = 
 }
 function draw(){
     background(220)
