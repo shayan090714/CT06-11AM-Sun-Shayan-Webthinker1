@@ -19,7 +19,7 @@ function setup(){
 
     hidden = random(WORDS)
     console.log(hidden)
-    hints = hidden[0]
+    hints = hidden[0] +" _ _ _ _"
 }
 function draw(){
     background(220)
