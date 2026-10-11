@@ -16,6 +16,6 @@ function setup(){
 }
 function draw(){
     background(220)
-    FileList("black")
+    fill("black")
 }
     
