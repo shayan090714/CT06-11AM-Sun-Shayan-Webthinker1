@@ -5,7 +5,7 @@ let guessInput
 let submitButton
 
 function setup(){
-    createCanvas(600,400)
+    createCanvas(800,650)
     background(220)
     
 }
