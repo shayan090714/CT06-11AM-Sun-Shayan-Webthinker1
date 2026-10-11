@@ -3,6 +3,8 @@ hiddenwords = [
     ]
 let guessInput
 let submitButton
+let message = ""
+let hints
 
 function setup(){
     createCanvas(800,650)
