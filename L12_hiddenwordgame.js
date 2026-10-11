@@ -44,6 +44,6 @@ function draw(){
     text("Hint:" + hints,width/2,185)
     fill("red")
     textSize(28)
-    text(message,width/2,heigth/2,)
+    text(message,width/2,heigth/2+150)
 }
     
