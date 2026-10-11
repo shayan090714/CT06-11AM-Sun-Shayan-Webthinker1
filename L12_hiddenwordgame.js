@@ -24,7 +24,7 @@ function setup(){
 }
 
 function checkAnswer(){
-    let answer = guessInput.input.value()
+    let answer = guessInput.inputvalue()
     answer = answer.toUppercae()
 
     if (answer===hidden){
