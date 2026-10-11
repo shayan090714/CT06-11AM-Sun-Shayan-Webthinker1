@@ -24,7 +24,7 @@ function setup(){
 }
 
 function checkAnswer(){
-    let answer = 
+    let answer = guessInput.input.value()
 }
 function draw(){
     background(220)
