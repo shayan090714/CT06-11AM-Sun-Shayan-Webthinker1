@@ -31,7 +31,7 @@ function checkAnswer(){
         message = "You won the game!"
     }
     else{
-        
+        message = "Wrong!"
     }
 }
 function draw(){
