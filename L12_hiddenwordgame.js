@@ -14,4 +14,7 @@ function setup(){
     submitButton.position(width/2+75,heigth/2)
     submitButton.style("font-style","20px")
 }
+function draw(){
+    
+}
     
