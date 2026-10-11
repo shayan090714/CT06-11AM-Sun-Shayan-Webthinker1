@@ -26,6 +26,8 @@ function setup(){
 function checkAnswer(){
     let answer = guessInput.input.value()
     answer = answer.toUppercae()
+
+    if (answer===hidden)
 }
 function draw(){
     background(220)
