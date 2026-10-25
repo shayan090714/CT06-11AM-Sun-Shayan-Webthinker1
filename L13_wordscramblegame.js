@@ -38,7 +38,7 @@ function chooseHiddenWord(){
 hiddenword = random(WORDS)
 hiddenword = hiddenword.toUpperCase
 
-
+}
 function scrambleWord(aword){
     let arrLetters = aWord.split("")
     for (let index =arrLetters.length-1;
@@ -66,5 +66,4 @@ function draw(){
     text("Score:"+ score,width/2,height/2+80)
     text("Streak:"+ streak + "(Max:"+max+")",width/2,height/2+110)
     text(message,width/2,height,2+140)
-}
 }
