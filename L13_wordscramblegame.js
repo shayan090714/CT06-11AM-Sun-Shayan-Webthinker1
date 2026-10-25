@@ -50,7 +50,7 @@ function scrambleWord(aword){
             second = arrLetters[who]
             temporary = first
             arrLetters[index] = second
-            arrLetters[who]
+            arrLetters[who] = temporary
         }
     
 
