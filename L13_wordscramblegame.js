@@ -53,7 +53,7 @@ function scrambleWord(aword){
             arrLetters[who] = temporary
         }
         print("Correct?"+ arrLetters)
-        
+        return
     
 
 }
