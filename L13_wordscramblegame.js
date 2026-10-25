@@ -49,7 +49,8 @@ function scrambleWord(aword){
             who = floor(random(0,index+1))
             second = arrLetters[who]
             temporary = first
-            arrLetters[index]
+            arrLetters[index] = second
+            arr
         }
     
 
