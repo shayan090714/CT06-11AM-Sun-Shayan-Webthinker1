@@ -40,7 +40,7 @@ if (guess===hiddenword){
     message = "You guessed it!"
 }
 else{
-    
+    message = "Nah"
 }
 
 }
