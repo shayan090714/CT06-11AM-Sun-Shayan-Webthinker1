@@ -37,7 +37,7 @@ function checkGuess(){
 let guess = guessInput.value()
 guess= guess.toUpperCase()
 if (guess===hiddenword){
-    
+    message = "You guessed it!"
 }
 
 }
