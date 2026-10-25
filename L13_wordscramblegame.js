@@ -24,12 +24,12 @@ function setup(){
     submitButton = createButton("Submit")
     submitButton.position(485,280)
     submitButton.style("font-size","18px")
-    submitButton.size(110,30)
+    submitButton.size(150,30)
     submitButton.mousePressed(checkGuess)
+
 }
-
 function doScrambleAgain(){
-
+scrambled =scrambledWord(hiddenword)
 }
 function checkGuess(){
 
@@ -37,8 +37,7 @@ function checkGuess(){
 function chooseHiddenWord(){
 hiddenword = random(WORDS)
 hiddenword = hiddenword.toUpperCase
-scrambled = scrambledWord(hiddenword)
-}
+
 
 function scrambleWord(aword){
     let arrLetters = aWord.split("")
@@ -67,4 +66,5 @@ function draw(){
     text("Score:"+ score,width/2,height/2+80)
     text("Streak:"+ streak + "(Max:"+max+")",width/2,height/2+110)
     text(message,width/2,height,2+140)
+}
 }
