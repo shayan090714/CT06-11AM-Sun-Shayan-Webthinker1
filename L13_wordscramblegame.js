@@ -41,7 +41,7 @@ hiddenword = random(WORDS)
 hiddenword = hiddenword.toUpperCase()
 scrambled = scrambledWord(hiddenword)
 }
-function scrambleWord(aword){
+function scrambledWord(aword){
     let arrLetters = aWord.split("")
     for (let index =arrLetters.length-1;
         index > 0;
