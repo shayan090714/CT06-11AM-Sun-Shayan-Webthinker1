@@ -52,7 +52,8 @@ function scrambleWord(aword){
             arrLetters[index] = second
             arrLetters[who] = temporary
         }
-        print("Correct?"+ arrletters)
+        print("Correct?"+ arrLetters)
+        
     
 
 }
