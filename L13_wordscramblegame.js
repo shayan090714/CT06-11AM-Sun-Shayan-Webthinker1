@@ -8,5 +8,5 @@ function draw(){
     text("Word Scramble Game",width/2,height/2+100)
 
     textSize(24)
-    text()
+    text("Score:")
 }
