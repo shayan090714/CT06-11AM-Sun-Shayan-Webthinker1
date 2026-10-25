@@ -5,5 +5,5 @@ function draw(){
     background(220)
     textSize(32)
     textAlign(CENTER,CENTER)
-    text("World")
+    text("Word Scramble Game")
 }
