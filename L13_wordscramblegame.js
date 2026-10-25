@@ -42,6 +42,13 @@ scrambled = scrambledWord(hiddenword)
 
 function scrambleWord(aword){
     let arrLetters = aWord.split("")
+    for (let index =arrLetters.length-1;
+        index > 0;
+        index --){
+            first = arrLetters[index]
+            who = floor(random(0,index+1))
+        }
+    
 
 }
 function draw(){
