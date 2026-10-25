@@ -6,4 +6,6 @@ function draw(){
     textSize(32)
     textAlign(CENTER,CENTER)
     text("Word Scramble Game",width/2,height/2+100)
+
+    textSize(24)
 }
