@@ -35,7 +35,8 @@ scrambled =scrambledWord(hiddenword)
 }
 function checkGuess(){
 let guess = guessInput.value()
-guess= guess
+guess= guess.toUpperCase()
+
 }
 function chooseHiddenWord(){
 hiddenword = random(WORDS)
