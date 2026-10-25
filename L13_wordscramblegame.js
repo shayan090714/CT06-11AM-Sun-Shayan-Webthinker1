@@ -37,6 +37,7 @@ function checkGuess(){
 let guess = guessInput.value()
 guess= guess.toUpperCase()
 
+
 }
 function chooseHiddenWord(){
 hiddenword = random(WORDS)
