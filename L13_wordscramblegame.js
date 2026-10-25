@@ -4,5 +4,6 @@ function setup(){
 function draw(){
     background(220)
     textSize(32)
-    textAlign(CustomElementRegistry,CENTER)
+    textAlign(CENTER,CENTER)
+    
 }
