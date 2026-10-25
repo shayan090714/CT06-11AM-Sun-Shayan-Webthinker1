@@ -39,6 +39,9 @@ guess= guess.toUpperCase()
 if (guess===hiddenword){
     message = "You guessed it!"
 }
+else{
+    
+}
 
 }
 function chooseHiddenWord(){
