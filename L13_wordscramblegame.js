@@ -37,7 +37,7 @@ function checkGuess(){
 function chooseHiddenWord(){
 hiddenword = random(WORDS)
 hiddenword = hiddenword.toUpperCase()
-scrambled = scrambledW
+scrambled = scrambledWord(hiddenword)
 }
 function scrambleWord(aword){
     let arrLetters = aWord.split("")
