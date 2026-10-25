@@ -6,6 +6,7 @@ let hiddenword = " "
 let scrambledButton
 let guessInput = " "
 let submitButton
+let score
 
 const WORDS= ["Expression","Knowledgeable","Photographs","Bumblebee"]
 function setup(){
