@@ -3,8 +3,10 @@ createCanvas(600,400)
 background("black")
 }
 function draw(){
-    if(!gamestarted)
-        
+    if(!gamestarted){
+        dr
+    }
+
     fill("white")
     textSize(44)
     textAlign(CENTER,CENTER)
