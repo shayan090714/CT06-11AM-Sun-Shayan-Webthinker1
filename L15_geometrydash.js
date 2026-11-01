@@ -5,6 +5,7 @@ background("black")
 function draw(){
     if(!gamestarted){
         drawStartScreen()
+        return
     }
     fill("white")
     textSize(44)
