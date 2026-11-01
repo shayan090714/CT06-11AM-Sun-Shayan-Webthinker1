@@ -10,7 +10,7 @@ function draw(){
     fill("white")
     textSize(14)
     textAlign(CENTER,CENTER)
-    
+    Text("Press")
     fill("white")
     textSize(44)
     textAlign(CENTER,CENTER)
