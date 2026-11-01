@@ -9,7 +9,8 @@ function draw(){
     }
     fill("white")
     textSize(14)
-    textAlign(CENTERCENTER)
+    textAlign(CENTER,CENTER)
+    
     fill("white")
     textSize(44)
     textAlign(CENTER,CENTER)
