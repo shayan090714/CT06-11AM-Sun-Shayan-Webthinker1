@@ -15,13 +15,16 @@ playerY = height-playerSize
 function draw(){
     background("black");
 
-velocity += 0.1
-playerY += velocity
+
 
     if(!gameStarted){
         drawStartScreen();
         return;
     }
+
+velocity += 0.1
+playerY += velocity
+
     fill("white");
     textSize(14);
     textAlign(CENTER,CENTER);
