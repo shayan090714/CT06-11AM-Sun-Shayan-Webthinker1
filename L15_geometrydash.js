@@ -57,7 +57,7 @@ else {
     fill("red")
     for (let index = 0;index<3;index++){
         spikesX[index] -=spikeSpeed
-        triangle(spikesX[index],height,spikesX[index]/2,spikesX[index]+spikeWidth,height)
+        triangle(spikesX[index],height,spikesX[index]/2+spikeWidth,height)
     }
 }
     function drawStartScreen(){
