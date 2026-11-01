@@ -7,6 +7,7 @@ function draw(){
         drawStartScreen()
         return
     }
+    
     fill("white")
     textSize(44)
     textAlign(CENTER,CENTER)
