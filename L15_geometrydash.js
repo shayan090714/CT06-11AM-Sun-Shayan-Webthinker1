@@ -3,7 +3,7 @@ createCanvas(600,400)
 background("black")
 }
 function draw(){
-    textAlign(CENTER,)
+    textAlign(CENTER,CENTER)
     Text("Press SPACE to start",width/2,height/2)
 
 }
