@@ -8,9 +8,9 @@ let isGrounded = false
 
 
 let spikesX = []
-let spikeWidth = 20
-let spikeHeight = 30
-let spikeSpeed = 5
+let spikesWidth = 20
+let spikesHeight = 30
+let spikesSpeed = 5
 
 
 function setup(){
