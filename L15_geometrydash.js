@@ -22,7 +22,7 @@ function draw(){
         return;
     }
 
-velocity += 0.1
+velocity += 0.8
 playerY += velocity
 
     fill("white");
@@ -41,7 +41,7 @@ playerY += velocity
     text("Press SPACE to start",width/2,height/2);
 }
 function keyPressed(){
-    if (keyCode === 32){
+    if (keyCode === 32 ){
         gameStarted = true;
     }
 }
