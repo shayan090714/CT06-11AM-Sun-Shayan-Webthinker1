@@ -16,7 +16,7 @@ function draw(){
     fill("white");
     textSize(44);
     textAlign(CENTER,CENTER);
-    Text("Press SPACE to start",width/2,height/2);
+    text("Press SPACE to start",width/2,height/2);
 }
 function keyPressed(){
     if (keyCode === 32){
