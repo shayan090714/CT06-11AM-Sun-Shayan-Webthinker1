@@ -10,7 +10,7 @@ function draw(){
     fill("white");
     textSize(14);
     textAlign(CENTER,CENTER);
-    Text("Press SPACE to jump",width/2,50);
+    text("Press SPACE to jump",width/2,50);
 }
     function drawStartScreen(){
     fill("white");
