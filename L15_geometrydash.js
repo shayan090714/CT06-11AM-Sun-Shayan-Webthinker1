@@ -16,7 +16,7 @@ function draw(){
     background("black");
 
 velocity += 0.1
-velocity += playerY
+playerY += velocity
 
     if(!gameStarted){
         drawStartScreen();
