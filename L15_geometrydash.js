@@ -41,7 +41,7 @@ playerY += velocity
     text("Press SPACE to start",width/2,height/2);
 }
 function keyPressed(){
-    if (keyCode === 32 ){
+    if (keyCode === 32 && isGrounded){
         gameStarted = true;
     }
 }
