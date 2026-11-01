@@ -4,7 +4,7 @@ background("black")
 }
 function draw(){
     if(!gamestarted){
-        dr
+        drawStartScreen()
     }
 
     fill("white")
