@@ -11,6 +11,7 @@ function draw(){
     textSize(14)
     textAlign(CENTER,CENTER)
     Text("Press SPACE to jump",width/2,50)
+}
     function drawStartScreen(){
     fill("white")
     textSize(44)
@@ -18,4 +19,3 @@ function draw(){
     Text("Press SPACE to start",width/2,height/2)
 }
 
-}
