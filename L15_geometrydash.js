@@ -58,9 +58,9 @@ else {
     for (let index = 0;index<3;index++){
         spikesX[index] -=spikeSpeed
          
+    if (spikesX[index])
 
 
-        
         triangle(spikesX[index],height,
             spikesX[index]+spikeWidth/2,heightspikeHeight,
         spikesX[index]+spikesWidth,height)
