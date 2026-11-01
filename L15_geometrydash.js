@@ -2,7 +2,7 @@ let gameStarted = false
 let score = 0
 let playerX = 100
 let playerY
-let 
+let playerSize = 50
 
 function setup(){
 createCanvas(600,400);
