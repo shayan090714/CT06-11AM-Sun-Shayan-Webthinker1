@@ -3,7 +3,7 @@ createCanvas(600,400)
 background("black")
 }
 function draw(){
-    if(!gamestarted){
+    if(!gameStarted){
         drawStartScreen()
         return
     }
