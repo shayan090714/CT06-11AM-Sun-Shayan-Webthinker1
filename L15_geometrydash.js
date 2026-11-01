@@ -9,7 +9,8 @@ let isGrounded = false
 
 let spikesX = []
 let spikesWidth
-let spke
+let spikesHeight
+
 
 function setup(){
 createCanvas(600,400);
