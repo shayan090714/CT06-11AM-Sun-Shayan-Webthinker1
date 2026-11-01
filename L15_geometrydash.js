@@ -56,7 +56,7 @@ else {
 
     fill("red")
     for (let index = 0;index<3;index++){
-        spikesX[index] -=spikeSpeed
+        spikesX[index] -=spikesSpeed
          
     if (spikesX[index]<0){
         spikesX[index] = width+random(100,300)
