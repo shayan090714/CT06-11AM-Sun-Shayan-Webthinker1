@@ -15,7 +15,7 @@ function draw(){
     text("Press SPACE to jump",width/2,50);
 
     fill("green")
-    
+    Rect()
 }
     function drawStartScreen(){
     fill("white");
