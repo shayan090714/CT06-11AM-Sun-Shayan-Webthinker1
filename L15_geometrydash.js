@@ -18,4 +18,6 @@ function draw(){
     textAlign(CENTER,CENTER)
     Text("Press SPACE to start",width/2,height/2)
 }
-
+function keyPressed(){
+    
+}
