@@ -8,8 +8,8 @@ let isGrounded = false
 
 
 let spikesX = []
-let spikesWidth
 let spikesHeight
+let spk
 
 
 function setup(){
