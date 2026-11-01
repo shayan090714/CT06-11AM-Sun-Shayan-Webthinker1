@@ -6,7 +6,6 @@ function draw(){
     if(!gamestarted){
         drawStartScreen()
     }
-
     fill("white")
     textSize(44)
     textAlign(CENTER,CENTER)
