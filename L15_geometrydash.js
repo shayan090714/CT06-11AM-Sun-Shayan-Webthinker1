@@ -64,7 +64,7 @@ else {
 
 
         triangle(spikesX[index],height,
-            spikesX[index]+spikesWidth/2,heightspikeHeight,
+            spikesX[index]+spikesWidth/2,height,spikeHeight,
         spikesX[index]+spikesWidth,height)
     }
 }
