@@ -3,6 +3,7 @@ let score = 0
 let playerX = 100
 let playerY
 let playerSize = 50
+let velocity = 0
 
 function setup(){
 createCanvas(600,400);
