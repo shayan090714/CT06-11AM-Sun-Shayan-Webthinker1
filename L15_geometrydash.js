@@ -30,7 +30,7 @@ if (playerY >= height-playerSize){
     isGrounded = true
     playerY = height - playerSize
 }
-else 
+else isGrounded = false
 
     fill("white");
     textSize(14);
