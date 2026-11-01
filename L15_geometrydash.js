@@ -8,7 +8,8 @@ let isGrounded = false
 
 function setup(){
 createCanvas(600,400);
-background
+background("black")
+playerY = height-playerSize
 
 }
 function draw(){
