@@ -59,7 +59,7 @@ else {
         spikesX[index] -=spikeSpeed
          
     if (spikesX[index]<0){
-        spikesX
+        spikesX[index]
     }
 
 
