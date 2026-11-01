@@ -25,7 +25,7 @@ function draw(){
     text("Score:"+score,width/2,80)
 
     fill("lime")
-    rect(player)
+    rect(playerX,playerY,playerSize,50)
 }
     function drawStartScreen(){
     fill("white");
