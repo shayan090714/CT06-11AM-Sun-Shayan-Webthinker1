@@ -46,6 +46,6 @@ function keyPressed(){
         gameStarted = true;
     }
     else if (keyCode === 32){
-        
+        gameStarted = true
     }
 }
