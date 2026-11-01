@@ -25,7 +25,7 @@ function draw(){
 velocity += 0.8
 playerY += velocity
 
-if (playerY)
+if (playerY >= heig)
 
     fill("white");
     textSize(14);
