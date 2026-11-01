@@ -1,4 +1,4 @@
-let gameStarted
+let gameStarted = false
 
 function setup(){
 createCanvas(600,400);
