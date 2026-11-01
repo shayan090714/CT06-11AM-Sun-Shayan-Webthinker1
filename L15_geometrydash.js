@@ -53,6 +53,8 @@ else {
 
     fill("lime")
     rect(playerX,playerY,playerSize,playerSize)
+
+    
 }
     function drawStartScreen(){
     fill("white");
