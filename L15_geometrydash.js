@@ -27,7 +27,8 @@ playerY += velocity
 
 if (playerY >= height-playerSize){
     velocity = 0
-    isGrounde = true
+    isGrounded = true
+    
 }
 
     fill("white");
