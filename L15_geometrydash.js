@@ -45,4 +45,7 @@ function keyPressed(){
         velocity = -18
         gameStarted = true;
     }
+    else if (keyCode === 32){
+        
+    }
 }
