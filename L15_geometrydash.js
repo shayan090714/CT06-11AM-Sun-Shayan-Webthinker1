@@ -15,7 +15,7 @@ playerY = height-playerSize
 function draw(){
     background("black");
 
-veloxity
+velocity += 0.8
 
     if(!gameStarted){
         drawStartScreen();
