@@ -367,10 +367,25 @@ function guideZombie(zombie) {
   if (!nextSurface) return;
   let direction;
   let shouldJump = false;
+  const isHigherPlatform = nextSurface.y < zombie.surface.y;
+  const center = zombie.x + zombie.w / 2;
   if (nextSurface === zombie.surface) {
     direction = Math.sign(player.x - zombie.x);
+  } else if (isHigherPlatform) {
+    // Walk to the platform first, then jump only when it is within reach.
+    const overlapsPlatform = zombie.x + zombie.w > nextSurface.x &&
+      zombie.x < nextSurface.x + nextSurface.w;
+    if (overlapsPlatform) {
+      direction = Math.sign(nextSurface.x + nextSurface.w / 2 - center) || 1;
+      shouldJump = true;
+    } else if (zombie.x + zombie.w <= nextSurface.x) {
+      direction = 1;
+      shouldJump = zombie.x + zombie.w + zombie.speed >= nextSurface.x;
+    } else {
+      direction = -1;
+      shouldJump = zombie.x - zombie.speed <= nextSurface.x + nextSurface.w;
+    }
   } else {
-    const center = zombie.x + zombie.w / 2;
     if (nextSurface.x + nextSurface.w <= center) {
       direction = -1;
       shouldJump = zombie.x <= zombie.surface.x + 8;
@@ -389,7 +404,8 @@ function guideZombie(zombie) {
   const minX = zombie.surface.x;
   const maxX = zombie.surface.x + zombie.surface.w - zombie.w;
   const atEdge = direction < 0 ? zombie.x <= minX + 2 : zombie.x >= maxX - 2;
-  const needsJump = nextSurface !== zombie.surface && (shouldJump || atEdge);
+  const needsJump = nextSurface !== zombie.surface &&
+    (shouldJump || (!isHigherPlatform && atEdge));
   const obstacleAhead = collidesWithObstacle(zombie, nextX);
   if (needsJump || obstacleAhead) {
     zombie.vy = -ZOMBIE_JUMP_SPEED;
