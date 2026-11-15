@@ -115,15 +115,19 @@ function generateLevelLayout() {
   // Place platforms over solid ground so each one has a reachable starting point.
   const platformCount = 6 + level * 2;
   for (let i = 0; i < platformCount; i++) {
-    const section = random(groundSections);
-    if (section.w < 240) continue;
+    const section = random(groundSections.filter((ground) =>
+      ground.x < bunkerStart && min(ground.x + ground.w, bunkerStart) - ground.x >= 240
+    ));
+    if (!section) continue;
 
     const widths = [random(90, 125), random(130, 170), random(175, 215)];
     const platformWidth = widths[floor(random(widths.length))];
-    const platformX = random(section.x + 25, section.x + section.w - 65);
+    const maxStart = min(section.x + section.w - platformWidth - 10, bunkerStart - platformWidth - 10);
+    if (maxStart < section.x + 10) continue;
+    const platformX = random(section.x + 10, maxStart);
     const heightAboveGround = random(45, min(105 + level * 3, 118));
     const platform = {
-      x: constrain(platformX, section.x + 10, section.x + section.w - 50),
+      x: platformX,
       y: GROUND_Y - heightAboveGround,
       w: platformWidth,
       h: 18
@@ -165,6 +169,42 @@ function generateLevelLayout() {
       }
     }
   }
+
+  // Use a simple safe route if any generated piece fails the playability checks.
+  if (!isLayoutPlayable()) {
+    groundSections = [
+      { x: 0, w: 650, y: GROUND_Y },
+      { x: 730, w: 650, y: GROUND_Y },
+      { x: 1460, w: 650, y: GROUND_Y },
+      { x: 2190, w: LEVEL_LENGTH - 2190, y: GROUND_Y }
+    ];
+    platforms = [];
+    obstacles = [];
+  }
+}
+
+function isLayoutPlayable() {
+  if (groundSections.length === 0 || groundSections[0].x !== 0 ||
+      groundSections[groundSections.length - 1].x + groundSections[groundSections.length - 1].w < LEVEL_LENGTH) {
+    return false;
+  }
+  for (let i = 0; i < groundSections.length - 1; i++) {
+    const gap = groundSections[i + 1].x - (groundSections[i].x + groundSections[i].w);
+    if (gap < 0 || gap > 110) return false;
+  }
+  for (const platform of platforms) {
+    const hasGroundBelow = groundSections.some((ground) =>
+      platform.x >= ground.x && platform.x + platform.w <= ground.x + ground.w
+    );
+    if (!hasGroundBelow || GROUND_Y - platform.y > 120 || platform.y >= GROUND_Y) return false;
+  }
+  for (const obstacle of obstacles) {
+    const hasGroundBelow = groundSections.some((ground) =>
+      obstacle.x >= ground.x && obstacle.x + obstacle.w <= ground.x + ground.w
+    );
+    if (!hasGroundBelow || obstacle.h > 35) return false;
+  }
+  return true;
 }
 
 // Put each zombie fully on a clear surface, away from the player and other zombies.
@@ -371,7 +411,7 @@ function canJumpBetween(from, to) {
   const gap = max(0, from.x - (to.x + to.w), to.x - (from.x + from.w));
   const heightToClimb = from.y - to.y;
   const heightToDrop = to.y - from.y;
-  return gap <= 110 && heightToClimb <= 95 && heightToDrop <= 125;
+  return gap <= 110 && heightToClimb <= 120 && heightToDrop <= 125;
 }
 
 function moveBodyX(body, amount) {
