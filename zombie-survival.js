@@ -148,12 +148,14 @@ function generateLevelLayout() {
   for (let i = 0; i < obstacleCount; i++) {
     for (let attempt = 0; attempt < 18; attempt++) {
       const section = random(groundSections);
-      if (section.w < 150) continue;
+      const edgeSpace = 150;
+      if (section.w < edgeSpace * 2 + 42) continue;
       const type = obstacleTypes[floor(random(obstacleTypes.length))];
+      const obstacleWidth = type === "barrier" ? 42 : 30;
       const obstacle = {
-        x: random(section.x + 38, section.x + section.w - 78),
+        x: random(section.x + edgeSpace, section.x + section.w - edgeSpace - obstacleWidth),
         y: GROUND_Y - 30,
-        w: type === "barrier" ? 42 : 30,
+        w: obstacleWidth,
         h: 30,
         type
       };
