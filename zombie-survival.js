@@ -5,7 +5,7 @@ const LEVEL_LENGTH = 3600;
 const LAST_LEVEL = 4;
 const ZOMBIE_WIDTH = 34;
 const ZOMBIE_HEIGHT = 40;
-const ZOMBIE_JUMP_SPEED = 12;
+const ZOMBIE_JUMP_SPEED = 14;
 
 const weapons = [
   { name: "PISTOL", price: 0, cooldown: 22, damage: 1, spread: 0, bullets: 1 },
@@ -88,6 +88,7 @@ function resetLevel() {
     vy: 0,
     facing: 1,
     grounded: false,
+    surface: null,
     invulnerable: 0
   };
 
@@ -106,10 +107,10 @@ function generateLevelLayout() {
 
   while (x < bunkerStart - 360) {
     const sectionLength = min(random(360, 560), bunkerStart - 360 - x);
-    groundSections.push({ x, w: sectionLength });
+    groundSections.push({ x, w: sectionLength, y: GROUND_Y });
     x += sectionLength + random(42, maxGap);
   }
-  groundSections.push({ x, w: LEVEL_LENGTH - x });
+  groundSections.push({ x, w: LEVEL_LENGTH - x, y: GROUND_Y });
 
   // Place platforms over solid ground so each one has a reachable starting point.
   const platformCount = 6 + level * 2;
@@ -190,7 +191,7 @@ function spawnZombies() {
         vy: 0,
         health: 1 + Math.floor((level - 1) / 2),
         maxHealth: 1 + Math.floor((level - 1) / 2),
-        speed: 1.5 + level * 0.14 + random(0, 0.2),
+        speed: 2.7 + level * 0.1 + random(0, 0.2),
         grounded: true,
         surface,
         alive: true
@@ -312,7 +313,7 @@ function landOnSurfaces(body, previousY) {
 }
 
 function getSurfaces() {
-  return [...groundSections.map((section) => ({ ...section, y: GROUND_Y })), ...platforms];
+  return [...groundSections, ...platforms];
 }
 
 // Follow only surfaces connected by a jump the zombie can make.
@@ -378,7 +379,7 @@ function canJumpBetween(from, to) {
   const gap = max(0, from.x - (to.x + to.w), to.x - (from.x + from.w));
   const heightToClimb = from.y - to.y;
   const heightToDrop = to.y - from.y;
-  return gap <= 125 && heightToClimb <= 95 && heightToDrop <= 125;
+  return gap <= 110 && heightToClimb <= 95 && heightToDrop <= 125;
 }
 
 function moveBodyX(body, amount) {
@@ -463,6 +464,7 @@ function drawWorld() {
       rect(x, platform.y + 9, 18, 4);
     }
   }
+  for (const obstacle of obstacles) drawObstacle(obstacle);
   drawBunker();
   for (const coin of coins) drawCoin(coin);
   for (const bullet of bullets) {
@@ -564,6 +566,34 @@ function drawCoin(coin) {
   circle(coin.x, coin.y, coin.r * 1.35);
   fill("#fff0a0");
   rect(coin.x - 2, coin.y - 5, 4, 10);
+}
+
+function drawObstacle(obstacle) {
+  noStroke();
+  if (obstacle.type === "spikes") {
+    fill("#c85d60");
+    for (let x = obstacle.x; x < obstacle.x + obstacle.w; x += 10) {
+      triangle(x, GROUND_Y, x + 5, obstacle.y, x + 10, GROUND_Y);
+    }
+  } else if (obstacle.type === "barrier") {
+    fill("#d6aa52");
+    rect(obstacle.x, obstacle.y + 7, obstacle.w, 15);
+    fill("#873e45");
+    rect(obstacle.x + 5, obstacle.y, 7, 30);
+    rect(obstacle.x + obstacle.w - 12, obstacle.y, 7, 30);
+    fill("#f0d47a");
+    rect(obstacle.x + 10, obstacle.y + 10, obstacle.w - 20, 4);
+  } else {
+    fill("#79533e");
+    rect(obstacle.x, obstacle.y, obstacle.w, obstacle.h);
+    fill("#ae8054");
+    rect(obstacle.x + 4, obstacle.y + 4, obstacle.w - 8, 4);
+    stroke("#49372f");
+    strokeWeight(3);
+    line(obstacle.x + 4, obstacle.y + 4, obstacle.x + obstacle.w - 4, obstacle.y + obstacle.h - 4);
+    line(obstacle.x + obstacle.w - 4, obstacle.y + 4, obstacle.x + 4, obstacle.y + obstacle.h - 4);
+    noStroke();
+  }
 }
 
 function drawBunker() {
