@@ -115,9 +115,11 @@ function generateLevelLayout() {
   // Place platforms over solid ground so each one has a reachable starting point.
   const platformCount = 6 + level * 2;
   for (let i = 0; i < platformCount; i++) {
-    const section = random(groundSections.filter((ground) =>
+    const availableSections = groundSections.filter((ground) =>
       ground.x < bunkerStart && min(ground.x + ground.w, bunkerStart) - ground.x >= 240
-    ));
+    );
+    if (availableSections.length === 0) break;
+    const section = random(availableSections);
     if (!section) continue;
 
     const widths = [random(90, 125), random(130, 170), random(175, 215)];
@@ -218,7 +220,8 @@ function spawnZombies() {
       if (surface.w < ZOMBIE_WIDTH + 12) continue;
       const x = random(surface.x + 6, surface.x + surface.w - ZOMBIE_WIDTH - 6);
       const zombie = { x, y: surface.y - ZOMBIE_HEIGHT, w: ZOMBIE_WIDTH, h: ZOMBIE_HEIGHT };
-      if (abs(x - player.x) < 280 || collidesWithObstacle(zombie, x)) continue;
+      if (x + zombie.w > LEVEL_LENGTH - 300 ||
+          abs(x - player.x) < 280 || collidesWithObstacle(zombie, x)) continue;
       if (zombies.some((other) => abs(other.x - x) < ZOMBIE_WIDTH + 18)) continue;
       if (platforms.some((platform) =>
         platform.y < surface.y && platform.y + platform.h > zombie.y &&
@@ -308,9 +311,13 @@ function updateGame() {
       screen = "lose";
       stateTimer = 105;
     } else {
-      player.x = max(35, player.x - 180);
+      const previousGround = [...groundSections].reverse().find((section) =>
+        section.x + section.w <= player.x + player.w
+      );
+      player.x = previousGround ? max(previousGround.x, previousGround.x + previousGround.w - player.w) : 35;
       player.y = GROUND_Y - player.h;
       player.vy = 0;
+      player.surface = previousGround || null;
       player.invulnerable = 100;
     }
   }
