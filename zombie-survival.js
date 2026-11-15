@@ -221,17 +221,7 @@ function updateGame() {
   for (const zombie of zombies) {
     if (!zombie.alive) continue;
     guideZombie(zombie);
-    const oldX = zombie.x;
     moveBodyX(zombie, zombie.vx);
-    const obstacleAhead = zombie.grounded &&
-      collidesWithObstacle(zombie, zombie.x + Math.sign(zombie.vx || 1) * (zombie.w / 2 + 5));
-    if (obstacleAhead) {
-      zombie.vy = -ZOMBIE_JUMP_SPEED;
-      zombie.grounded = false;
-      zombie.surface = null;
-    } else if (zombie.x === oldX && zombie.vx !== 0 && zombie.grounded) {
-      zombie.vx = 0;
-    }
     zombie.vy += 0.7;
     const oldY = zombie.y;
     zombie.y += zombie.vy;
@@ -318,8 +308,9 @@ function getSurfaces() {
 
 // Follow only surfaces connected by a jump the zombie can make.
 function guideZombie(zombie) {
+  if (!zombie.grounded) return;
   zombie.vx = 0;
-  if (!zombie.grounded || !zombie.surface || !player.surface) return;
+  if (!zombie.surface || !player.surface) return;
 
   const nextSurface = getNextSurface(zombie.surface, player.surface);
   if (!nextSurface) return;
@@ -341,6 +332,7 @@ function guideZombie(zombie) {
     }
   }
 
+  if (!direction && nextSurface !== zombie.surface) direction = 1;
   if (!direction) return;
   const nextX = zombie.x + direction * zombie.speed;
   const minX = zombie.surface.x;
