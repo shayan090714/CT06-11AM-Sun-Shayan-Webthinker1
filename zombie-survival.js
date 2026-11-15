@@ -3,6 +3,9 @@ const GAME_HEIGHT = 600;
 const GROUND_Y = 490;
 const LEVEL_LENGTH = 3600;
 const LAST_LEVEL = 4;
+const ZOMBIE_WIDTH = 34;
+const ZOMBIE_HEIGHT = 40;
+const ZOMBIE_JUMP_SPEED = 12;
 
 const weapons = [
   { name: "PISTOL", price: 0, cooldown: 22, damage: 1, spread: 0, bullets: 1 },
@@ -17,6 +20,7 @@ let zombies = [];
 let coins = [];
 let platforms = [];
 let groundSections = [];
+let obstacles = [];
 let stars = [];
 let cameraX = 0;
 let level = 1;
@@ -87,38 +91,112 @@ function resetLevel() {
     invulnerable: 0
   };
 
-  groundSections = [
-    { x: 0, w: 700 },
-    { x: 820, w: 680 },
-    { x: 1620, w: 780 },
-    { x: 2520, w: LEVEL_LENGTH - 2520 }
-  ];
-  platforms = [
-    { x: 690, y: 430, w: 145, h: 18 },
-    { x: 1050, y: 405, w: 150, h: 18 },
-    { x: 1490, y: 425, w: 155, h: 18 },
-    { x: 1830, y: 405, w: 160, h: 18 },
-    { x: 2390, y: 425, w: 155, h: 18 },
-    { x: 2800, y: 400, w: 165, h: 18 }
-  ];
+  generateLevelLayout();
+  spawnZombies();
+}
 
+// Keep every ground gap within a jumpable distance, then add optional parkour.
+function generateLevelLayout() {
+  groundSections = [];
+  platforms = [];
+  obstacles = [];
+  const bunkerStart = LEVEL_LENGTH - 260;
+  const maxGap = 70 + level * 6;
+  let x = 0;
+
+  while (x < bunkerStart - 360) {
+    const sectionLength = min(random(360, 560), bunkerStart - 360 - x);
+    groundSections.push({ x, w: sectionLength });
+    x += sectionLength + random(42, maxGap);
+  }
+  groundSections.push({ x, w: LEVEL_LENGTH - x });
+
+  // Place platforms over solid ground so each one has a reachable starting point.
+  const platformCount = 6 + level * 2;
+  for (let i = 0; i < platformCount; i++) {
+    const section = random(groundSections);
+    if (section.w < 240) continue;
+
+    const widths = [random(90, 125), random(130, 170), random(175, 215)];
+    const platformWidth = widths[floor(random(widths.length))];
+    const platformX = random(section.x + 25, section.x + section.w - 65);
+    const heightAboveGround = random(45, min(105 + level * 3, 118));
+    const platform = {
+      x: constrain(platformX, section.x + 10, section.x + section.w - 50),
+      y: GROUND_Y - heightAboveGround,
+      w: platformWidth,
+      h: 18
+    };
+
+    const tooClose = platforms.some((other) =>
+      abs(other.x - platform.x) < min(other.w, platform.w) * 0.65 &&
+      abs(other.y - platform.y) < 30
+    );
+    if (!tooClose) platforms.push(platform);
+  }
+
+  // Obstacles stay small enough to jump over and leave room around each gap.
+  const obstacleCount = 5 + level * 2;
+  const obstacleTypes = ["crate", "spikes", "barrier"];
+  for (let i = 0; i < obstacleCount; i++) {
+    for (let attempt = 0; attempt < 18; attempt++) {
+      const section = random(groundSections);
+      if (section.w < 150) continue;
+      const type = obstacleTypes[floor(random(obstacleTypes.length))];
+      const obstacle = {
+        x: random(section.x + 38, section.x + section.w - 78),
+        y: GROUND_Y - 30,
+        w: type === "barrier" ? 42 : 30,
+        h: 30,
+        type
+      };
+      if (obstacle.x < 300 || obstacle.x > bunkerStart - 230) continue;
+      const overlapsObstacle = obstacles.some((other) =>
+        obstacle.x < other.x + other.w + 90 && obstacle.x + obstacle.w + 90 > other.x
+      );
+      const underPlatform = platforms.some((platform) =>
+        obstacle.x < platform.x + platform.w && obstacle.x + obstacle.w > platform.x &&
+        platform.y + platform.h > obstacle.y - ZOMBIE_HEIGHT
+      );
+      if (!overlapsObstacle && !underPlatform) {
+        obstacles.push(obstacle);
+        break;
+      }
+    }
+  }
+}
+
+// Put each zombie fully on a clear surface, away from the player and other zombies.
+function spawnZombies() {
   zombies = [];
-  const zombieCount = 5 + level * 2;
-  for (let i = 0; i < zombieCount; i++) {
-    const x = 420 + i * (2350 / zombieCount) + random(-45, 45);
-    zombies.push({
-      x,
-      y: GROUND_Y - 40,
-      w: 34,
-      h: 40,
-      vx: 0,
-      vy: 0,
-      health: 1 + Math.floor((level - 1) / 2),
-      maxHealth: 1 + Math.floor((level - 1) / 2),
-      speed: 0.55 + level * 0.12 + random(0, 0.18),
-      grounded: false,
-      alive: true
-    });
+  const count = 5 + level * 2 + floor(random(-1, 3));
+  const surfaces = getSurfaces();
+  for (let i = 0; i < count; i++) {
+    for (let attempt = 0; attempt < 80; attempt++) {
+      const surface = random(surfaces);
+      if (surface.w < ZOMBIE_WIDTH + 12) continue;
+      const x = random(surface.x + 6, surface.x + surface.w - ZOMBIE_WIDTH - 6);
+      const zombie = { x, y: surface.y - ZOMBIE_HEIGHT, w: ZOMBIE_WIDTH, h: ZOMBIE_HEIGHT };
+      if (abs(x - player.x) < 280 || collidesWithObstacle(zombie, x)) continue;
+      if (zombies.some((other) => abs(other.x - x) < ZOMBIE_WIDTH + 18)) continue;
+      if (platforms.some((platform) =>
+        platform.y < surface.y && platform.y + platform.h > zombie.y &&
+        x < platform.x + platform.w && x + zombie.w > platform.x
+      )) continue;
+
+      zombies.push({
+        ...zombie,
+        vx: 0,
+        vy: 0,
+        health: 1 + Math.floor((level - 1) / 2),
+        maxHealth: 1 + Math.floor((level - 1) / 2),
+        speed: 1.5 + level * 0.14 + random(0, 0.2),
+        grounded: true,
+        surface,
+        alive: true
+      });
+      break;
+    }
   }
 }
 
