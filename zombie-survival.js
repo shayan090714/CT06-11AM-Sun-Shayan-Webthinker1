@@ -205,7 +205,7 @@ function updateGame() {
   const moveRight = keyIsDown(68);
   player.vx = (Number(moveRight) - Number(moveLeft)) * 3.8;
   if (player.vx !== 0) player.facing = Math.sign(player.vx);
-  player.x = constrain(player.x + player.vx, 0, LEVEL_LENGTH - player.w);
+  moveBodyX(player, player.vx);
 
   player.vy += 0.72;
   const previousY = player.y;
@@ -219,10 +219,18 @@ function updateGame() {
 
   for (const zombie of zombies) {
     if (!zombie.alive) continue;
-    const distance = player.x - zombie.x;
-    if (abs(distance) < 510) zombie.vx = Math.sign(distance) * zombie.speed;
-    else zombie.vx = 0;
-    zombie.x = constrain(zombie.x + zombie.vx, 0, LEVEL_LENGTH - zombie.w);
+    guideZombie(zombie);
+    const oldX = zombie.x;
+    moveBodyX(zombie, zombie.vx);
+    const obstacleAhead = zombie.grounded &&
+      collidesWithObstacle(zombie, zombie.x + Math.sign(zombie.vx || 1) * (zombie.w / 2 + 5));
+    if (obstacleAhead) {
+      zombie.vy = -ZOMBIE_JUMP_SPEED;
+      zombie.grounded = false;
+      zombie.surface = null;
+    } else if (zombie.x === oldX && zombie.vx !== 0 && zombie.grounded) {
+      zombie.vx = 0;
+    }
     zombie.vy += 0.7;
     const oldY = zombie.y;
     zombie.y += zombie.vy;
@@ -230,10 +238,6 @@ function updateGame() {
     landOnSurfaces(zombie, oldY);
 
     if (overlaps(player, zombie) && player.invulnerable === 0) hurtPlayer();
-    if (zombie.y > GAME_HEIGHT + 100) {
-      zombie.y = GROUND_Y - zombie.h;
-      zombie.vy = 0;
-    }
   }
 
   for (const bullet of bullets) {
@@ -287,21 +291,106 @@ function updateGame() {
 }
 
 function landOnSurfaces(body, previousY) {
+  body.surface = null;
   if (body.vy < 0) return;
   const oldBottom = previousY + body.h;
   const newBottom = body.y + body.h;
-  const surfaces = [
-    ...groundSections.map((section) => ({ x: section.x, y: GROUND_Y, w: section.w })),
-    ...platforms
-  ];
-  for (const surface of surfaces) {
+  let landingSurface = null;
+  for (const surface of getSurfaces()) {
     const overlapsX = body.x + body.w > surface.x && body.x < surface.x + surface.w;
-    if (overlapsX && oldBottom <= surface.y && newBottom >= surface.y) {
-      body.y = surface.y - body.h;
-      body.vy = 0;
-      body.grounded = true;
+    if (overlapsX && oldBottom <= surface.y && newBottom >= surface.y &&
+        (!landingSurface || surface.y < landingSurface.y)) {
+      landingSurface = surface;
     }
   }
+  if (landingSurface) {
+    body.y = landingSurface.y - body.h;
+    body.vy = 0;
+    body.grounded = true;
+    body.surface = landingSurface;
+  }
+}
+
+function getSurfaces() {
+  return [...groundSections.map((section) => ({ ...section, y: GROUND_Y })), ...platforms];
+}
+
+// Follow only surfaces connected by a jump the zombie can make.
+function guideZombie(zombie) {
+  zombie.vx = 0;
+  if (!zombie.grounded || !zombie.surface || !player.surface) return;
+
+  const nextSurface = getNextSurface(zombie.surface, player.surface);
+  if (!nextSurface) return;
+  let direction;
+  let shouldJump = false;
+  if (nextSurface === zombie.surface) {
+    direction = Math.sign(player.x - zombie.x);
+  } else {
+    const center = zombie.x + zombie.w / 2;
+    if (nextSurface.x + nextSurface.w <= center) {
+      direction = -1;
+      shouldJump = zombie.x <= zombie.surface.x + 8;
+    } else if (nextSurface.x >= center) {
+      direction = 1;
+      shouldJump = zombie.x + zombie.w >= zombie.surface.x + zombie.surface.w - 8;
+    } else {
+      direction = Math.sign((nextSurface.x + nextSurface.w / 2) - center);
+      shouldJump = true;
+    }
+  }
+
+  if (!direction) return;
+  const nextX = zombie.x + direction * zombie.speed;
+  const minX = zombie.surface.x;
+  const maxX = zombie.surface.x + zombie.surface.w - zombie.w;
+  const atEdge = direction < 0 ? zombie.x <= minX + 2 : zombie.x >= maxX - 2;
+  const needsJump = nextSurface !== zombie.surface && (shouldJump || atEdge);
+  const obstacleAhead = collidesWithObstacle(zombie, nextX);
+  if (needsJump || obstacleAhead) {
+    zombie.vy = -ZOMBIE_JUMP_SPEED;
+    zombie.grounded = false;
+    zombie.surface = null;
+  }
+  zombie.vx = direction * zombie.speed;
+  if (zombie.grounded) zombie.x = constrain(nextX, minX, maxX);
+}
+
+function getNextSurface(start, target) {
+  if (start === target) return start;
+  const surfaces = getSurfaces();
+  const queue = [{ surface: start, first: null }];
+  const visited = new Set([start]);
+  while (queue.length > 0) {
+    const current = queue.shift();
+    for (const candidate of surfaces) {
+      if (visited.has(candidate) || !canJumpBetween(current.surface, candidate)) continue;
+      const first = current.first || candidate;
+      if (candidate === target) return first;
+      visited.add(candidate);
+      queue.push({ surface: candidate, first });
+    }
+  }
+  return null;
+}
+
+function canJumpBetween(from, to) {
+  const gap = max(0, from.x - (to.x + to.w), to.x - (from.x + from.w));
+  const heightToClimb = from.y - to.y;
+  const heightToDrop = to.y - from.y;
+  return gap <= 125 && heightToClimb <= 95 && heightToDrop <= 125;
+}
+
+function moveBodyX(body, amount) {
+  const nextX = constrain(body.x + amount, 0, LEVEL_LENGTH - body.w);
+  if (!collidesWithObstacle(body, nextX)) body.x = nextX;
+}
+
+function collidesWithObstacle(body, x) {
+  return obstacles.some((obstacle) =>
+    x < obstacle.x + obstacle.w && x + body.w > obstacle.x &&
+    body.y < obstacle.y + obstacle.h && body.y + body.h > obstacle.y
+  );
 }
 
 function shoot() {
