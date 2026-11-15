@@ -103,10 +103,11 @@ function generateLevelLayout() {
   obstacles = [];
   const bunkerStart = LEVEL_LENGTH - 260;
   const maxGap = 70 + level * 6;
+  const lastChunkEnd = bunkerStart - 360;
   let x = 0;
 
-  while (x < bunkerStart - 360) {
-    const sectionLength = min(random(360, 560), bunkerStart - 360 - x);
+  while (x < lastChunkEnd - 720) {
+    const sectionLength = min(random(360, 560), lastChunkEnd - 360 - x);
     groundSections.push({ x, w: sectionLength, y: GROUND_Y });
     x += sectionLength + random(42, maxGap);
   }
@@ -192,6 +193,7 @@ function isLayoutPlayable() {
       groundSections[groundSections.length - 1].x + groundSections[groundSections.length - 1].w < LEVEL_LENGTH) {
     return false;
   }
+  if (groundSections.some((section) => section.w < ZOMBIE_WIDTH)) return false;
   for (let i = 0; i < groundSections.length - 1; i++) {
     const gap = groundSections[i + 1].x - (groundSections[i].x + groundSections[i].w);
     if (gap < 0 || gap > 110) return false;
