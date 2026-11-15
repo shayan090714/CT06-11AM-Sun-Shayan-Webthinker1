@@ -350,6 +350,7 @@ function landOnSurfaces(body, previousY) {
     body.vy = 0;
     body.grounded = true;
     body.surface = landingSurface;
+    body.jumpTarget = null;
   }
 }
 
@@ -359,7 +360,16 @@ function getSurfaces() {
 
 // Follow only surfaces connected by a jump the zombie can make.
 function guideZombie(zombie) {
-  if (!zombie.grounded) return;
+  if (!zombie.grounded) {
+    // Keep a jumping zombie over its landing surface instead of overshooting it.
+    if (zombie.jumpTarget) {
+      const center = zombie.x + zombie.w / 2;
+      if (center < zombie.jumpTarget.x) zombie.vx = zombie.speed;
+      else if (center > zombie.jumpTarget.x + zombie.jumpTarget.w) zombie.vx = -zombie.speed;
+      else zombie.vx = 0;
+    }
+    return;
+  }
   zombie.vx = 0;
   if (!zombie.surface || !player.surface) return;
 
@@ -410,6 +420,7 @@ function guideZombie(zombie) {
   if (needsJump || obstacleAhead) {
     zombie.vy = -ZOMBIE_JUMP_SPEED;
     zombie.grounded = false;
+    zombie.jumpTarget = needsJump ? nextSurface : null;
     zombie.surface = null;
   }
   zombie.vx = direction * zombie.speed;
