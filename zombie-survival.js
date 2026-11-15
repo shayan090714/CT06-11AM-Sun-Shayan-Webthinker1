@@ -121,7 +121,6 @@ function generateLevelLayout() {
     );
     if (availableSections.length === 0) break;
     const section = random(availableSections);
-    if (!section) continue;
 
     const widths = [random(90, 125), random(130, 170), random(175, 215)];
     const platformWidth = widths[floor(random(widths.length))];
@@ -315,13 +314,15 @@ function updateGame() {
       screen = "lose";
       stateTimer = 105;
     } else {
-      const previousGround = [...groundSections].reverse().find((section) =>
+      const safeGround = groundSections.find((section) =>
+        player.x >= section.x && player.x + player.w <= section.x + section.w
+      ) || [...groundSections].reverse().find((section) =>
         section.x + section.w <= player.x + player.w
       );
-      player.x = previousGround ? max(previousGround.x, previousGround.x + previousGround.w - player.w) : 35;
+      player.x = safeGround ? max(safeGround.x, min(player.x, safeGround.x + safeGround.w - player.w)) : 35;
       player.y = GROUND_Y - player.h;
       player.vy = 0;
-      player.surface = previousGround || null;
+      player.surface = safeGround || null;
       player.invulnerable = 100;
     }
   }
