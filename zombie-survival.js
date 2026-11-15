@@ -190,7 +190,16 @@ function updateGame() {
   coins = coins.filter((coin) => !coin.collected);
 
   if (player.y > GAME_HEIGHT + 55 && player.invulnerable === 0) {
-    hurtPlayer();
+    lives--;
+    if (lives <= 0) {
+      screen = "lose";
+      stateTimer = 105;
+    } else {
+      player.x = max(35, player.x - 180);
+      player.y = GROUND_Y - player.h;
+      player.vy = 0;
+      player.invulnerable = 100;
+    }
   }
   cameraX = constrain(player.x - width * 0.34, 0, LEVEL_LENGTH - width);
   if (player.x >= LEVEL_LENGTH - 155) {
